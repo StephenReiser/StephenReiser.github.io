@@ -1,3 +1,109 @@
-body {
-    color: red
+.container {
+    display: flex;
+    flex-direction: column;
+}  
+
+
+
+
+/* container includes inpt box, the div that recipes get appended to and the footer */
+.inputForm {
+    text-align: center;
+    width: 100%;
+    
 }
+/* input form includes the input forms - want it to stretch across the entire screen and fill the screen on load */
+
+.recipeBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+}
+/* this is the div that the recipes will be appended to, would like them to be displayed 3 across while the screen is large, and then in column when small */
+
+.singleRecipe {
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    /* height: 150px; */
+    
+    border: 1px solid black;
+    margin: 2%;
+}
+
+
+/* single Recipe is the div for the indiviudal recipe divs it will contain two divs - first including the pic, second including some info */
+
+.recipePic {
+    height: 40%;
+    width: 100%;
+    background-size: contain;
+    /* display: flex; */
+    /* overflow: hidden; */
+    /* align-items: center; */
+    object-fit: cover;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: darkgrey;
+    
+    
+
+    
+}
+.recipePic > h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.recipePic > img {
+    max-width: 100%;
+    max-height: 100%;
+    /* width: 20%; */
+    
+}
+/* recipePic is the div within singleRecipe containing just the picture - maybe with an h2 over it.  The picture shoudl be set up like this <a><img></img></a> */
+
+.recipeInfo {
+    /* height: 60%; */
+    width: 100%;
+    /* background: blue; */
+    display: none;
+}
+
+/* recipeInfo is the div within singleRecipe containing ingredients and information probably shoudl make the header a link to the website*/
+
+
+
+
+footer {
+  text-align: center;
+}
+
+
+/* this is to clear the formatiting on the title links */
+h3 {
+
+    text-align: center;
+    /* background-color: black; */
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* This is for the list items and the UL */
+ul {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+
+
+/* If I were to have 2 divs and I change one display to none what happens. */
