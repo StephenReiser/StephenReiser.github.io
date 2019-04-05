@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-    <script src='js/app.js'></script>
-    <link rel="stylesheet" href='css/main.css'>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <!-- This adds attribution -->
+  <script src="https://developer.edamam.com/attribution/badge.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="UTF-8"></script>
+  <script src='js/app.js'></script>
+  <link rel='stylesheet' href='css/main.css'>
+  <title>Document</title>
 </head>
 <body>
-    
+  <!---------------- main div --------------->
+  <div class='container'> 
+    <!---------------- div including inputForm.  Need to take input and assign it to a variable --------------->
+    <div class='inputForm'>
+      <form class='includeIngredients'>
+          <input type="text" id="input-box"/>
+          <input type="submit" id="submit-btn" />
+
+      </form>
+    </div>
+    <!---------------- div to append the recipes to need to assign a class to the appended divs--------------->
+    <div class='recipeBox'>
+
+    </div>
+
+
+
+
+
+
+
+<!---------------- close main div --------------->
+  </div>
+
+
+
+
+
+
+
+  <footer>
+    <!-- This is the attribution div - could move it to above the closing div to keep it within the flex -->
+    <div id="edamam-badge" data-color="white"></div>
+  </footer>
 </body>
 </html>
