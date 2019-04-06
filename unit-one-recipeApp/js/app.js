@@ -256,7 +256,12 @@ const loadMore = (event) => {
 
 $(() => { /////start doc on ready func
     
-
+/////////////////////These functions are to make the on hover work on the dummy divs
+////////////////////////////////////////////////////////
+$(`.recipeInfo`).on(`mouseleave`,infoHoverFunc)
+$(`.recipePic`).on(`mouseenter`, picHoverFunc)
+//////////////////////////////////////////////////////////
+///////////////////////////////////////////
 
 
 
