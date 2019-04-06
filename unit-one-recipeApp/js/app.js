@@ -6,6 +6,12 @@ let recipeEndCount = 99
 
 ////These are the number of recipes to load on click.  the includeButton function is setting these to 0 and 10.  The load more button is incrementing each by 10 - so on load 10 are loaded and then each time user clicks load more, 10 more are loaded.
 
+let excludeIngredients = ''
+let dietRestrictions = ''
+let healthRestrictions = ''
+
+///////these are addtional variables to be included in the search - diet restrictions shoudl be a drop down
+
 
 
 /////////////////////////////////////////
@@ -24,7 +30,12 @@ const includeButton = (event) => {
     $(`.recipeBox`).empty()
     event.preventDefault()
     // $(event.currentTarget).trigger('reset') //removed this - I think it is useful for the user to be able to see what they searched for
-    console.log(ingredients)
+    // console.log(ingredients)
+    excludeIngredients = $(`#exclude-box`).val()
+    dietRestrictions = $(`#dietRestrictions`).val()
+    healthRestrictions = $(`#healthRestrictions`).val()
+    // console.log(excludeStuff)
+    // console.log(dietStuff)
     
     /////////////////////////////////////////
     findRecipes()   //<<<<<<<<<<<<Commented this out for now just so I'm not constantly calling the ajax
@@ -111,10 +122,10 @@ const infoHoverFunc = (event) => {
 
 ///////////////////////////////////////////////////////
 
-//////////// this is the ajax function linked to edamam////////////////
+//////////// this is the ajax function linked to edamam//////////////// ends up beeing SUPER LONG to include the big if/else statement around the diet restrictions/health restrictions being blank
 const findRecipes = () => {
 
-
+if (dietRestrictions === '' && healthRestrictions === '') {
     $.ajax({
     url: `https://api.edamam.com/search`,
     type: "GET",
@@ -123,7 +134,14 @@ const findRecipes = () => {
         app_id: '9d94e852',
         app_key: '480a66a770af9cbc380a775b8959453c',
         from: recipeStartCount,
-        to: recipeEndCount
+        to: recipeEndCount,
+        excluded: excludeIngredients,
+        // diet: dietRestrictions,
+        // health: healthRestrictions,
+
+        //These work IF they are filled in - if not they return an error - probably need to make a little if/else statement
+
+
     }
 }).then((data) => {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
@@ -134,6 +152,88 @@ const findRecipes = () => {
 }, (error) => {
     console.log(error)
 });
+} else if (dietRestrictions === '' && healthRestrictions !== '') {
+    $.ajax({
+    url: `https://api.edamam.com/search`,
+    type: "GET",
+    data: {
+        q: ingredients,
+        app_id: '9d94e852',
+        app_key: '480a66a770af9cbc380a775b8959453c',
+        from: recipeStartCount,
+        to: recipeEndCount,
+        excluded: excludeIngredients,
+        // diet: dietRestrictions,
+        health: healthRestrictions,
+
+        //These work IF they are filled in - if not they return an error - probably need to make a little if/else statement
+
+
+    }
+}).then((data) => {
+ console.log(data.hits[0]) //to get to recipes its data.hits[i]
+ for (let i = 0; i < data.hits.length; i++) {
+  headerAndImage(data,i)  
+ }
+
+}, (error) => {
+    console.log(error)
+});
+} else if (dietRestrictions !== '' && healthRestrictions === '') {
+    $.ajax({
+    url: `https://api.edamam.com/search`,
+    type: "GET",
+    data: {
+        q: ingredients,
+        app_id: '9d94e852',
+        app_key: '480a66a770af9cbc380a775b8959453c',
+        from: recipeStartCount,
+        to: recipeEndCount,
+        excluded: excludeIngredients,
+        diet: dietRestrictions,
+        // health: healthRestrictions,
+
+        //These work IF they are filled in - if not they return an error - probably need to make a little if/else statement
+
+
+    }
+}).then((data) => {
+ console.log(data.hits[0]) //to get to recipes its data.hits[i]
+ for (let i = 0; i < data.hits.length; i++) {
+  headerAndImage(data,i)  
+ }
+
+}, (error) => {
+    console.log(error)
+});
+} else {
+    $.ajax({
+    url: `https://api.edamam.com/search`,
+    type: "GET",
+    data: {
+        q: ingredients,
+        app_id: '9d94e852',
+        app_key: '480a66a770af9cbc380a775b8959453c',
+        from: recipeStartCount,
+        to: recipeEndCount,
+        excluded: excludeIngredients,
+        diet: dietRestrictions,
+        health: healthRestrictions,
+
+        //These work IF they are filled in - if not they return an error - probably need to make a little if/else statement
+
+
+    }
+}).then((data) => {
+ console.log(data.hits[0]) //to get to recipes its data.hits[i]
+ for (let i = 0; i < data.hits.length; i++) {
+  headerAndImage(data,i)  
+ }
+
+}, (error) => {
+    console.log(error)
+});
+}
 }
 ///////////end ajax function////////////////////////////////
 

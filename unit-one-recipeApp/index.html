@@ -20,7 +20,25 @@
       <form class='includeIngredients'>
           <input type="text" id="input-box" autofocus="on" placeholder="Search Ingredients"/>
           <input type="text" id="exclude-box" placeholder="Exclude Ingredients"/>
-          <!-- <input type="text" id="input-box" autofocus="on" placeholder="Search Ingredients"/> -->
+
+          <!-- Not sure if this will work in a form - but there are 10 'health' options to choose from in the free version of the API -->
+          <select id='dietRestrictions'>
+              <option value=''>Diet Restrictions</option>
+              <option value="balanced">Balanced</option>
+              <option value="high protein">High Protein</option>
+              <option value="low-fat">Low-Fat</option>
+              <option value="low-carb">Low-Carb</option>
+            </select>
+            <select id='healthRestrictions'>
+              <option value="">Health Restrictions</option>
+              <option value="vegan">Vegan</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="sugar-conscious">Sugar-Conscious</option>
+              <option value="peanut-free">Peanut-Free</option>
+              <option value="tree-nut-free">Tree-Nut-Free</option>
+              <option value="alcohol-free">Alocohol-Free</option>
+            </select>
+            
           <input type="submit" id="submit-btn" value='Get Recipes!'/>
 
       </form>
