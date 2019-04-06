@@ -252,6 +252,43 @@ const loadMore = (event) => {
 
 
 
+////////////////////////////////////////////////////////
+///This section is for the Modal to get the data input and then run the ajax function
+
+
+const modalButton = (event) => {
+    let $modal = $(`#myModal`)
+    $modal.css(`display`, `none`)
+    event.preventDefault()
+    
+    excludeIngredients = $(`#modal-exclude`).val()
+    dietRestrictions = $(`#modalDietRestrictions`).val()
+    healthRestrictions = $(`#modalHealthRestrictions`).val()
+    ingredients = $(`#modal-input`).val()
+    recipeStartCount = 0
+    recipeEndCount = 10
+
+    findRecipes()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $(() => { /////start doc on ready func
@@ -267,6 +304,7 @@ $(`.recipePic`).on(`mouseenter`, picHoverFunc)
 
 
 $(`.includeIngredients`).on(`submit`, includeButton)
+$(`.modalIncludeIngredients`).on(`submit`, modalButton)
 $(`button`).on(`click`,loadMore)
 
 
