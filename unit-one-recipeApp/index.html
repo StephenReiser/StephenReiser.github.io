@@ -18,8 +18,10 @@
     <!---------------- div including inputForm.  Need to take input and assign it to a variable --------------->
     <div class='inputForm'>
       <form class='includeIngredients'>
-          <input type="text" id="input-box"/>
-          <input type="submit" id="submit-btn" />
+          <input type="text" id="input-box" autofocus="on" placeholder="Search Ingredients"/>
+          <input type="text" id="exclude-box" placeholder="Exclude Ingredients"/>
+          <!-- <input type="text" id="input-box" autofocus="on" placeholder="Search Ingredients"/> -->
+          <input type="submit" id="submit-btn" value='Get Recipes!'/>
 
       </form>
     </div>
@@ -37,13 +39,15 @@
 
 
 
+    <div class='loadMore'>
+      <button>Load More Recipes!</button>
+    </div>
 
-
-<!---------------- close main div --------------->
-<footer>
-  <!-- This is the attribution div - could move it to above the closing div to keep it within the flex -->
-  <div id="edamam-badge" data-color="white"></div>
-</footer>
+    <footer>
+      <!-- This is the attribution div - could move it to above the closing div to keep it within the flex -->
+      <div id="edamam-badge" data-color="white"></div>
+    </footer>
+    <!---------------- close main div --------------->
   </div>
 
 

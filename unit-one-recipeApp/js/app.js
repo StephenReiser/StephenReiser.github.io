@@ -1,6 +1,10 @@
 //////////////////Global variables
 let ingredients = ''  //this is a default - need to make it take the input from the submit button.  Probably also need a way to put everything to lower case, remove spaces (apprently it doesn't matter to remove spaces/lowercase) and maybe remove special characters.  I dont even need to add commas 
 
+let recipeStartCount = 99
+let recipeEndCount = 99
+
+////These are the number of recipes to load on click.  the includeButton function is setting these to 0 and 10.  The load more button is incrementing each by 10 - so on load 10 are loaded and then each time user clicks load more, 10 more are loaded.
 
 
 
@@ -15,6 +19,9 @@ let ingredients = ''  //this is a default - need to make it take the input from 
 const includeButton = (event) => {
     let addIngredients = $(`#input-box`).val()
     ingredients = addIngredients
+    recipeStartCount = 0
+    recipeEndCount = 10
+    $(`.recipeBox`).empty()
     event.preventDefault()
     // $(event.currentTarget).trigger('reset') //removed this - I think it is useful for the user to be able to see what they searched for
     console.log(ingredients)
@@ -44,10 +51,10 @@ const headerAndImage = (data, i) => {
      const $aTag = $(`<a>`).attr(`href`, recipeURL).text(recipeName)
      $header.append($aTag)
      let $mainDiv = $(`<div>`).addClass(`singleRecipe`)
-     let $newImageDiv = $(`<div>`).addClass(`recipePic`).on(`click`, picHoverFunc).append($recipeImage).append($header)
-     let $newTextDiv = $(`<div>`).addClass(`recipeInfo`).on(`click`,infoHoverFunc)
+     let $newImageDiv = $(`<div>`).addClass(`recipePic`).on(`mouseenter`, picHoverFunc).append($recipeImage).append($header)
+     let $newTextDiv = $(`<div>`).addClass(`recipeInfo`).on(`mouseleave`,infoHoverFunc)
 
-    /////////////////need to do some loop in here to add in the UL/LI
+    /////////////////this adds in the UL
 
     let $newUL = $(`<ul>`).text(`Ingredients:`)
 
@@ -62,6 +69,8 @@ const headerAndImage = (data, i) => {
 
 
     }
+
+    //////I think I want to append the h3 to both boxes - this would allow it to be displayed on flip. 
     $newTextDiv.append($newUL)
      $mainDiv.append($newImageDiv).append($newTextDiv)
      $('.recipeBox').append($mainDiv)
@@ -85,6 +94,10 @@ const headerAndImage = (data, i) => {
 ///
 /////////////////////////////////////////////////////////
 
+
+
+//////////////////////These two functions 'flip' the pictures to display a recipe'.  Currently being used on click - probably should do it on hover I want to change this to on hover or mouseenter.  probably need to target the parent div if this is mouse enter/////////////////////////////////////////////////////////////////////////////
+
 const picHoverFunc = (event) => {
     $(event.currentTarget).parent().children().eq(1).toggle()
     $(event.currentTarget).toggle()
@@ -96,7 +109,7 @@ const infoHoverFunc = (event) => {
     $(event.currentTarget).toggle()
 }
 
-
+///////////////////////////////////////////////////////
 
 //////////// this is the ajax function linked to edamam////////////////
 const findRecipes = () => {
@@ -108,32 +121,40 @@ const findRecipes = () => {
     data: {
         q: ingredients,
         app_id: '9d94e852',
-        app_key: '480a66a770af9cbc380a775b8959453c'
+        app_key: '480a66a770af9cbc380a775b8959453c',
+        from: recipeStartCount,
+        to: recipeEndCount
     }
 }).then((data) => {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
-
  for (let i = 0; i < data.hits.length; i++) {
   headerAndImage(data,i)  
  }
 
- 
-
-
-  
-  
-  
 }, (error) => {
     console.log(error)
 });
 }
 ///////////end ajax function////////////////////////////////
 
+const loadMore = (event) => {
+    recipeStartCount += 10
+    recipeEndCount += 10
+    event.preventDefault()
+    findRecipes()
 
 
 
 
-$(() => {
+
+    
+    }
+
+
+
+
+
+$(() => { /////start doc on ready func
     
 
 
@@ -141,7 +162,7 @@ $(() => {
 
 
 $(`.includeIngredients`).on(`submit`, includeButton)
+$(`button`).on(`click`,loadMore)
 
-// findRecipes()
 
-})
+})  //////end doc on ready func

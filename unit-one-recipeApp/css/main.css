@@ -14,6 +14,13 @@
 }
 /* input form includes the input forms - want it to stretch across the entire screen and fill the screen on load */
 
+/* THis section is for the input within the form */
+#input-box {
+    
+}
+
+
+
 .recipeBox {
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +77,8 @@
     width: 100%;
     /* background: blue; */
     display: none;
+    /* height: 100%; I need to find away to make the ingredients fill the space of the div shoud also set overflow to scroll or w/e so all are the same size*/
+    
 }
 
 /* recipeInfo is the div within singleRecipe containing ingredients and information probably shoudl make the header a link to the website*/
@@ -106,4 +115,20 @@ ul {
 
 
 
-/* If I were to have 2 divs and I change one display to none what happens. */
+/* Things to add:
+1. Banner up top - would be cool to have it full screen on load and then shrink once activated - could do this as a modal but I don' tknow if I want to.
+2. Probably could add calorie counts
+3. would like to make image a link
+4. include h3 tag on ingredient side of card.
+5. Woudl be nice to have the div on flip to not change size to fit
+6. everything is ugly - need to fix that, better h3 on the bottom, round edges perhaps. fonts/sizes
+7. I think it would be good to either rank recipe options? or pick a random set to show? or something like that so it changes each time.
+
+
+
+
+*/
+
+
+
+
