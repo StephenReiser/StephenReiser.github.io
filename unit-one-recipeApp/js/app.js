@@ -326,8 +326,8 @@ $(() => { /////start doc on ready func
     
 /////////////////////These functions are to make the on hover work on the dummy divs
 ////////////////////////////////////////////////////////
-$(`.recipeInfo`).on(`mouseleave`,infoHoverFunc)
-$(`.recipePic`).on(`mouseenter`, picHoverFunc)
+$(`.recipeInfo`).on(`hover`,infoHoverFunc)
+$(`.recipePic`).on(`hover`, picHoverFunc)
 //////////////////////////////////////////////////////////
 ///////////////////////////////////////////
 
