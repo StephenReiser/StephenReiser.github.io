@@ -20,12 +20,13 @@
   <!-- Modal content -->
   <div class="modal-content">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus, unde tempora sapiente doloremque quis veniam quia, vitae, ab autem ad facilis. Dolor, aperiam molestias sequi alias sunt tempora repudiandae.</p>
+      Input Ingredients:
       <div class='modalInput'>
           <form class='modalIncludeIngredients'>
               <input type="text" id="modal-input" autofocus="on" placeholder="Search Ingredients"/>
-              <input type="submit" id="modal-submit" value='Get Recipes!'/>
+              
           </br>
-              <input type="text" id="modal-exclude" placeholder="Exclude Ingredients"/>
+          Want to be more specific: <input type="text" id="modal-exclude" placeholder="Exclude Ingredients"/>
               <!-- Not sure if this will work in a form - but there are 10 'health' options to choose from in the free version of the API -->
               <select id='modalDietRestrictions'>
                   <option value=''>Diet Restrictions</option>
@@ -43,8 +44,9 @@
                   <option value="tree-nut-free">Tree-Nut-Free</option>
                   <option value="alcohol-free">Alocohol-Free</option>
                 </select>
+                <br>
                 
-              
+                <input type="submit" id="modal-submit" value='Get Recipes!'/>
     
           </form>
         </div>

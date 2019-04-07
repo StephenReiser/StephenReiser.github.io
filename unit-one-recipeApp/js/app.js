@@ -65,6 +65,14 @@ const headerAndImage = (data, i) => {
      let $newImageDiv = $(`<div>`).addClass(`recipePic`).on(`mouseenter`, picHoverFunc).append($recipeImage).append($header)
      let $newTextDiv = $(`<div>`).addClass(`recipeInfo`).on(`mouseleave`,infoHoverFunc)
 
+
+     /////this shoudl add a header to the List:
+     let $infoHeader = $(`<h3>`)
+     let $infoDiv = $(`<div>`)
+     const $infoATag = $(`<a>`).attr(`href`, recipeURL).text(recipeName)
+     $infoHeader.append($infoATag)
+     $infoDiv.append($infoHeader)
+
     /////////////////this adds in the UL
 
     let $newUL = $(`<ul>`).text(`Ingredients:`)
@@ -81,8 +89,10 @@ const headerAndImage = (data, i) => {
 
     }
 
-    //////I think I want to append the h3 to both boxes - this would allow it to be displayed on flip. 
+    //////I think I want to append the h3 to both boxes - this would allow it to be displayed on flip. At this point - probably also makes sense to add in something like header with a link, serving size and calories (or calorie/serving)
+    
     $newTextDiv.append($newUL)
+    $newTextDiv.append($infoDiv)
      $mainDiv.append($newImageDiv).append($newTextDiv)
      $('.recipeBox').append($mainDiv)
      ///////////////this section ends creating the header
@@ -111,7 +121,7 @@ const headerAndImage = (data, i) => {
 
 const picHoverFunc = (event) => {
 
-///////this if else func is trying to set the height of both sides of the recipes
+///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  It might be weird on the mobile view if this gets shrunk
 let frontHeight = $('.recipePic').outerHeight();
 let backHeight = $('.recipeInfo').outerHeight();
 
@@ -132,7 +142,7 @@ else {
 
 const infoHoverFunc = (event) => {
     console.log($(event.currentTarget))
-    ///////this if else func is trying to set the height of both sides of the recipes
+    ///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  It might be weird on the mobile view if this gets shrunk
 let frontHeight = $('.recipePic').outerHeight();
 let backHeight = $('.recipeInfo').outerHeight();
 

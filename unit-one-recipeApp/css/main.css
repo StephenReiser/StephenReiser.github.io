@@ -74,7 +74,7 @@
 
     
 }
-.recipePic > h3 {
+.recipePic > h3, .recipeInfo > div > h3 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -96,9 +96,17 @@
     /* flex-basis: 0; */
    
     height: 100%;
-    
+    background-color: darkgrey;
     overflow: scroll;
+    overflow-x: hidden;
     
+}
+
+.recipeInfo > div {
+    /* position: sticky; */
+    /* left: 0;
+    bottom: 0; */
+    /* width: 100%; */
 }
 
 /* recipeInfo is the div within singleRecipe containing ingredients and information probably shoudl make the header a link to the website*/
@@ -116,6 +124,7 @@ h3 {
 
     text-align: center;
     /* background-color: black; */
+    color: white;
 }
 a {
     text-decoration: none;
@@ -128,6 +137,9 @@ ul {
     text-align: left;
     margin: 0;
     padding: 0;
+    background-color: white;
+    font-size: .8em;
+    
     
 }
 
@@ -173,20 +185,34 @@ ul {
     border: 1px solid #888;
     width: 40%; /* Could be more or less, depending on screen size */
     height: 40%;
+    text-align: center;
   }
   
-  /* The Close Button */
-  /* .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  #modal-input {
+      width: 60%;
+      padding: 3%;
+      margin: 2%;
+      font-size: 1.25em;
+      /* height: 10%; */
   }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  } */
 
+  #modal-submit {
+      width: 50%;
+      margin: 2%;
+      font-size: 1em;
+      background-color: lightblue;
+      height: 10%;
+      border: 2px solid black;
+      box-shadow: 5px 5px rgba(0,0,0,0.3);
+      cursor: pointer;
+      padding: 2%;
+      
+  }
+
+  #modal-submit:hover {
+    height: 15%;
+    width: 65%;
+    /* background-color: cadetblue; */
+    font-weight: 600;
+    border: 5px solid black;
+  }
