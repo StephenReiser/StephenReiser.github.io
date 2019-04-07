@@ -110,12 +110,43 @@ const headerAndImage = (data, i) => {
 //////////////////////These two functions 'flip' the pictures to display a recipe'.  Currently being used on click - probably should do it on hover I want to change this to on hover or mouseenter.  probably need to target the parent div if this is mouse enter/////////////////////////////////////////////////////////////////////////////
 
 const picHoverFunc = (event) => {
+
+///////this if else func is trying to set the height of both sides of the recipes
+let frontHeight = $('.recipePic').outerHeight();
+let backHeight = $('.recipeInfo').outerHeight();
+
+if (frontHeight > backHeight) {
+    $('recipeInfo').height(frontHeight);
+}
+else if (frontHeight > backHeight) {
+    $('.recipeInfo').height(backHeight);
+}
+else {
+    $('.recipeInfo').height(frontHeight);
+}
+
+///this if else is trying to set the height of both sides of the recipes
     $(event.currentTarget).parent().children().eq(1).toggle()
     $(event.currentTarget).toggle()
 }
 
 const infoHoverFunc = (event) => {
     console.log($(event.currentTarget))
+    ///////this if else func is trying to set the height of both sides of the recipes
+let frontHeight = $('.recipePic').outerHeight();
+let backHeight = $('.recipeInfo').outerHeight();
+
+if (frontHeight > backHeight) {
+    $('recipeInfo').height(frontHeight);
+}
+else if (frontHeight > backHeight) {
+    $('.recipeInfo').height(backHeight);
+}
+else {
+    $('.recipeInfo').height(frontHeight);
+}
+
+///this if else is trying to set the height of both sides of the recipes
     $(event.currentTarget).parent().children().eq(0).toggle()
     $(event.currentTarget).toggle()
 }
@@ -267,8 +298,8 @@ const modalButton = (event) => {
     ingredients = $(`#modal-input`).val()
     recipeStartCount = 0
     recipeEndCount = 10
-
-    findRecipes()
+//////////////////////
+    // findRecipes() //comented out to make this not run on click for now
 }
 
 

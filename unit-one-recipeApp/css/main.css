@@ -1,6 +1,12 @@
+* {
+    font-family: sans-serif;
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }  
 
 
@@ -10,6 +16,12 @@
 .inputForm {
     text-align: center;
     width: 100%;
+    background: red;
+    padding: 2%;
+    position: fixed;
+    top: 0;
+    margin-bottom: 200px;
+    
     
 }
 /* input form includes the input forms - want it to stretch across the entire screen and fill the screen on load */
@@ -27,6 +39,7 @@
     justify-content: space-around;
     align-items: center;
     width: 75%;
+    margin-top: 5%;
 }
 /* this is the div that the recipes will be appended to, would like them to be displayed 3 across while the screen is large, and then in column when small */
 
@@ -54,6 +67,8 @@
     overflow: hidden;
     white-space: nowrap;
     background-color: darkgrey;
+    /* flex-basis: 0; */
+    /* position: relative; */
     
     
 
@@ -78,6 +93,11 @@
     /* background: blue; */
     display: none;
     /* height: 100%; I need to find away to make the ingredients fill the space of the div shoud also set overflow to scroll or w/e so all are the same size*/
+    /* flex-basis: 0; */
+   
+    height: 100%;
+    
+    overflow: scroll;
     
 }
 
