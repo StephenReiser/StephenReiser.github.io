@@ -26,7 +26,7 @@ const includeButton = (event) => {
     let addIngredients = $(`#input-box`).val()
     ingredients = addIngredients
     recipeStartCount = 0
-    recipeEndCount = 10
+    recipeEndCount = 20
     $(`.recipeBox`).empty()
     event.preventDefault()
     // $(event.currentTarget).trigger('reset') //removed this - I think it is useful for the user to be able to see what they searched for
@@ -88,10 +88,6 @@ const headerAndImage = (data, i) => {
 
 
     }
-
-    //////I think I want to append the h3 to both boxes - this would allow it to be displayed on flip. At this point - probably also makes sense to add in something like header with a link, serving size and calories (or calorie/serving)
-
-    /////adding in the header here basically only looks good if the ingredients list is big - maybe we can fix this by adding in calories and stuff so it pushes to the bottom or by just adding it to the top so it looks less weird
     
     $newTextDiv.append($newUL)
     $newTextDiv.append($infoDiv)
@@ -299,8 +295,8 @@ if (dietRestrictions === '' && healthRestrictions === '') {
 ///////////end ajax function////////////////////////////////
 
 const loadMore = (event) => {
-    recipeStartCount += 10
-    recipeEndCount += 10
+    recipeStartCount += 20
+    recipeEndCount += 20
     event.preventDefault()
     findRecipes()
 
@@ -327,7 +323,7 @@ const modalButton = (event) => {
     healthRestrictions = $(`#modalHealthRestrictions`).val()
     ingredients = $(`#modal-input`).val()
     recipeStartCount = 0
-    recipeEndCount = 10
+    recipeEndCount = 20
 //////////////////////
     // findRecipes() //comented out to make this not run on click for now
 }
