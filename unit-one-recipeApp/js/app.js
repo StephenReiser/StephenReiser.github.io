@@ -124,33 +124,33 @@ const headerAndImage = (data, i) => {
 const picHoverFunc = (event) => {
 
 ///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  THIS WORKS ON MOBILE BUT IS BUGGY IF YOU CHANGE THE SIZE OF THE SCREEN LATER
-let frontHeight = $('.recipePic').height();
-let backHeight = $('.recipeInfo').height();
+let frontHeight = $(event.currentTarget).parent().height();
+let backHeight = $(event.currentTarget).parent().children().eq(1).height();
 
 if (frontHeight > backHeight) {
-    $('recipeInfo').height(frontHeight);
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
 }
 else if (frontHeight < backHeight) {
-    $('.recipeInfo').height(frontHeight);
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
 }
 else {
-    $('.recipeInfo').height(frontHeight);
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
 }
 
 ///////////////////////////////////////////
 // This section is trying to fix the width
 ///////////////////////////////////////////
-let frontWidth = $('.recipePic').outerWidth();
-let backWidth = $('.recipeInfo').outerWidth();
+let frontWidth = $(event.currentTarget).parent().outerWidth();
+let backWidth = $(event.currentTarget).parent().children().eq(1).outerWidth();
 
 if (frontWidth > backWidth) {
-    $('recipeInfo').width(frontWidth);
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
 }
 else if (frontWidth < backWidth) {
-    $('.recipeInfo').width(frontWidth);
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
 }
 else {
-    $('.recipeInfo').width(frontWidth);
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
 }
 
 
