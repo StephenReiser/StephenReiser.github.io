@@ -96,17 +96,24 @@
     /* flex-basis: 0; */
    
     height: 100%;
-    background-color: darkgrey;
+    /* background-color: darkgrey; */
     overflow: scroll;
     overflow-x: hidden;
-    
+    position: relative; 
+    /* trying position relative to pin the header to the bototm */
 }
 
 .recipeInfo > div {
-    /* position: sticky; */
-    /* left: 0;
-    bottom: 0; */
-    /* width: 100%; */
+    position: sticky;
+    /* this is a problem - looks fine on a smallish screen, using absolute is fine on big screen, but medium screens this floats to the middle */
+    /* vertical-align: bottom; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* max-height: 10%; */
+    background-color: darkgrey;
+    padding: 3%;
+    /* margin: 2%; */
 }
 
 /* recipeInfo is the div within singleRecipe containing ingredients and information probably shoudl make the header a link to the website*/
@@ -258,5 +265,24 @@ ul {
         width: auto;
         margin-top: 15%;
     }
+    .recipeInfo > div {
+        position: absolute;
 
+        /* this pins the header to the bototm on the back of the card */
+    }
+
+  }
+
+/* ---------------------------------------------------------------------------Full Screen CSS: 
+might be unnecessary but seems like I shoudl be doing this, maybe makes sense--------------------- --------------------------------------------------------*/
+  
+
+
+
+  @media screen and (min-width: 1000px) {
+    .recipeInfo > div {
+        position: absolute;
+
+        /* this pins the header to the bototm on the back of the card */
+    }
   }
