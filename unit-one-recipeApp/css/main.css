@@ -150,9 +150,11 @@ ul {
     padding: 2% 0 0 2%;
     background-color: white;
     font-size: .8em;
-    width: 90%;
+    width: 97%;
     overflow: scroll;
     height: 70%;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
     
     
 }
