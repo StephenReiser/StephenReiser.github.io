@@ -88,7 +88,22 @@ const headerAndImage = (data, i) => {
 
 
     }
-    
+
+//////////////////////////////////////////////////////////
+////////////This section is a test - I want to add a button above ingredients that then will dispaly a pop up of dietary stuff
+
+
+let $dietButton = $(`<button>`).attr(`class`, `dietButton`).text(`Get More Info!`).on(`click`, dietButtonModal)
+let $dietDiv = $(`<div>`).addClass(`dietDiv`)
+let $dietDivContent = $(`<div>`).addClass(`dietDivContent`).text(`testing testing`)
+let $dietCloseButton = $(`<button>`).attr(`class`, `dietCloseButton`).text(`Back to Ingredients`).on(`click`, dietCloseModal)
+
+$dietDiv.append($dietDivContent).append($dietCloseButton)
+
+
+
+//////////////////////////////////////////////////////////
+    $newTextDiv.append($dietButton).append($dietDiv)
     $newTextDiv.append($newUL)
     $newTextDiv.append($infoDiv)
      $mainDiv.append($newImageDiv).append($newTextDiv)
@@ -332,6 +347,21 @@ const modalButton = (event) => {
 
 
 
+//////////////////////////////////////////////////////////Diet Info Modal Button on click functions
+
+const dietButtonModal = (event) => {
+    let hiddenDiv = $(event.currentTarget).parent().children().eq(1)
+    console.log(hiddenDiv)
+    hiddenDiv.toggle()
+}
+
+const dietCloseModal = (event) => {
+    let hiddenDiv = $(event.currentTarget).parent()
+    console.log(hiddenDiv)
+    hiddenDiv.toggle()
+}
+
+
 
 
 
@@ -360,9 +390,13 @@ $(`.recipePic`).on(`hover`, picHoverFunc)
 
 
 
+//////////////////////////////////////////////////////////
+///////////////////////////////////////////
+
+
 $(`.includeIngredients`).on(`submit`, includeButton)
 $(`.modalIncludeIngredients`).on(`submit`, modalButton)
-$(`button`).on(`click`,loadMore)
+$(`.moreRecipesButton`).on(`click`,loadMore)
 
 
 })  //////end doc on ready func
