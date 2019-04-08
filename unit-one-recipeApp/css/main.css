@@ -16,7 +16,7 @@
 .inputForm {
     text-align: center;
     width: 100%;
-    background: red;
+    background: #808080;
     padding: 2%;
     position: fixed;
     top: 0;
@@ -49,7 +49,7 @@
     width: 27%;
     /* height: 150px; */
     
-    border: 1px solid black;
+    outline: 1px solid black;
     margin: 2%;
 }
 
@@ -148,7 +148,7 @@ ul {
 
 
 /* Things to add:
-1. Banner up top - would be cool to have it full screen on load and then shrink once activated - could do this as a modal but I don' tknow if I want to.
+
 2. Probably could add calorie counts
 3. would like to make image a link
 4. include h3 tag on ingredient side of card.
@@ -181,11 +181,12 @@ ul {
   .modal-content {
     background-color: #fefefe;
     margin: 10% auto; /* 15% from the top and centered */
-    padding: 5%;
-    border: 1px solid #888;
-    width: 40%; /* Could be more or less, depending on screen size */
-    height: 40%;
+    padding: 1%;
+    outline: 1px solid #888;
+    width: 45%; /* Could be more or less, depending on screen size */
+    height: 42%;
     text-align: center;
+    font-size: .8em;
   }
   
   #modal-input {
@@ -198,21 +199,63 @@ ul {
 
   #modal-submit {
       width: 50%;
-      margin: 2%;
+      margin: 5% 2% 2% 2%;
       font-size: 1em;
-      background-color: lightblue;
+      background-color: #e9f5f8;
       height: 10%;
-      border: 2px solid black;
-      box-shadow: 5px 5px rgba(0,0,0,0.3);
+      outline: 2px solid black;
+      /* box-shadow: 5px 5px rgba(0,0,0,0.3); */
       cursor: pointer;
       padding: 2%;
       
   }
 
   #modal-submit:hover {
-    height: 15%;
-    width: 65%;
+    /* height: 15%;
+    width: 65%; */
     /* background-color: cadetblue; */
-    font-weight: 600;
-    border: 5px solid black;
+    font-weight: 550;
+    background-color: #daedf4;
+  }
+
+  #modal-exclude, #modalDietRestrictions, #modalHealthRestrictions {
+      width: 30%;
+      margin: 2px;
+  }
+
+
+
+
+
+  /* ---------------------------------------------------------------------------Mobile CSS: --------------------- --------------------------------------------------------*/
+  
+
+  @media screen and (max-width: 600px) {
+    .modal-content {
+        padding: 2%;
+        outline: 1px solid #888;
+        width: 60%; /* made this larger so the items on the screen aren't squished. */
+        height: 40%;
+        text-align: center;
+        font-size: .8em;
+      }
+      #modal-input {
+        width: 60%;
+        padding: 3%;
+        margin: 2%;
+        /* font-size: .8em;
+        height: 10%; */
+    }
+
+    /* Modal sizing seems fine - could make the bars a bit different - but in terms of a work version, seems fine */
+
+    /* This section is for the recipe divs */
+    .recipeBox {
+        flex-direction: column;
+        width: 80%;
+    }
+    .singleRecipe {
+        width: auto;
+    }
+    
   }
