@@ -98,8 +98,9 @@
    
     height: 100%;
     /* background-color: darkgrey; */
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
+    overflow-y: hidden;
     position: relative; 
     /* trying position relative to pin the header to the bototm */
 }
@@ -113,7 +114,8 @@
     width: 100%;
     /* max-height: 10%; */
     background-color: darkgrey;
-    padding: 2%;
+    /* padding: .8%; */
+    padding-top: 1.5%;
     /* I don't even know if padding is doing anything here */
     /* margin: 2%; */
 }
@@ -145,11 +147,16 @@ ul {
     list-style-type: none;
     text-align: left;
     margin: 0;
-    padding: 4%;
+    padding: 2% 0 0 2%;
     background-color: white;
     font-size: .8em;
+    width: 90%;
     
     
+}
+
+li {
+    width: 90%;
 }
 
 
@@ -189,7 +196,7 @@ ul {
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 15% from the top and centered */
+    margin: 15% auto; /* 15% from the top and centered */
     padding: 1%;
     outline: 1px solid #888;
     width: 45%; /* Could be more or less, depending on screen size */
