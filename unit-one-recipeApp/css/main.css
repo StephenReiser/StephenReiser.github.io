@@ -78,6 +78,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-size: .8em;
 }
 .recipePic > img {
     max-width: 100%;
@@ -143,7 +144,7 @@ ul {
     list-style-type: none;
     text-align: left;
     margin: 0;
-    padding: 0;
+    padding: 4%;
     background-color: white;
     font-size: .8em;
     
@@ -237,7 +238,7 @@ ul {
   /* ---------------------------------------------------------------------------Mobile CSS: --------------------- --------------------------------------------------------*/
   
 
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 100px) and (max-width: 700px) {
     .modal-content {
         padding: 2%;
         outline: 1px solid #888;
@@ -270,8 +271,41 @@ ul {
 
         /* this pins the header to the bototm on the back of the card */
     }
+    .recipePic > h3, .recipeInfo > div > h3 {
+        font-size: 1em;
+    }
 
   }
+
+/* ---------------------------------------------------------------------------medium Screen CSS: 
+might be unnecessary but seems like I shoudl be doing this, maybe makes sense--------------------- --------------------------------------------------------*/
+  
+
+
+
+
+  @media screen and (min-width: 700px) and (max-width: 1000px) {
+    .recipeBox {
+        flex-direction: row;
+    }
+    .singleRecipe {
+        width: 40%;
+        /* height: 150px; */
+    }
+    .recipeInfo > div {
+        position: absolute;
+
+        /* this pins the header to the bototm on the back of the card */
+    }
+}
+
+
+
+
+
+
+
+
 
 /* ---------------------------------------------------------------------------Full Screen CSS: 
 might be unnecessary but seems like I shoudl be doing this, maybe makes sense--------------------- --------------------------------------------------------*/
