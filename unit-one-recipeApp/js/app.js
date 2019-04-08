@@ -95,14 +95,37 @@ const headerAndImage = (data, i) => {
 
 let $dietButton = $(`<button>`).attr(`class`, `dietButton`).text(`Get More Info!`).on(`click`, dietButtonModal)
 let $dietDiv = $(`<div>`).addClass(`dietDiv`)
-let $dietDivContent = $(`<div>`).addClass(`dietDivContent`).text(`testing testing`)
+
+
+//////////////////////This entire section sets the diet and cautions for each recipe and adds it to the modal
+let $cautionString = data.hits[i].recipe.cautions.join(',')
+let $dietString = data.hits[i].recipe.dietLabels.join(',')
+
+
+if (data.hits[i].recipe.cautions.length > 0) {
+    $cautionString = `Cautions: ${$cautionString}`
+} else {$cautionString = ''}
+if (data.hits[i].recipe.dietLabels.length > 0) {
+    $dietString = `Diet Labels: ${$dietString}`
+}
+
+let $dietDivContent = $(`<div>`).addClass(`dietDivContent`).html(`
+<p>
+${$cautionString} <br>
+${$dietString}
+</p>
+`)
+////^^^^^^^^^^^This entire section sets the diet and cautions for each recipe and adds it to the modal//////
+
 let $dietCloseButton = $(`<button>`).attr(`class`, `dietCloseButton`).text(`Back to Ingredients`).on(`click`, dietCloseModal)
 
 $dietDiv.append($dietDivContent).append($dietCloseButton)
 
 
-
+/////////////Modal works - need to add in a list or something for data.hits[i].recipe.cautions[caution array] and data.hits[i].recipe.dietLabels[dietLabels]
 //////////////////////////////////////////////////////////
+    
+
     $newTextDiv.append($dietButton).append($dietDiv)
     $newTextDiv.append($newUL)
     $newTextDiv.append($infoDiv)
