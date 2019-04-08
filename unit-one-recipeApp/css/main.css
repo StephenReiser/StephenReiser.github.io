@@ -98,21 +98,21 @@
    
     height: 100%;
     /* background-color: darkgrey; */
-    overflow: auto;
+    /* overflow: scroll; */
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     position: relative; 
     /* trying position relative to pin the header to the bototm */
 }
 
 .recipeInfo > div {
-    position: sticky;
+    position: relative;
     /* this is a problem - looks fine on a smallish screen, using absolute is fine on big screen, but medium screens this floats to the middle */
     /* vertical-align: bottom; */
     left: 0;
     bottom: 0;
     width: 100%;
-    /* max-height: 10%; */
+    /* max-height: 70%; */
     background-color: darkgrey;
     /* padding: .8%; */
     padding-top: 1.5%;
@@ -151,6 +151,8 @@ ul {
     background-color: white;
     font-size: .8em;
     width: 90%;
+    overflow: scroll;
+    height: 70%;
     
     
 }
@@ -258,10 +260,11 @@ li {
   /* Modal Content/Box */
   .dietDivContent {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 2%;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    font-size: .8em;
   }
   
   /* The Close Button */
@@ -270,6 +273,7 @@ li {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
   }
 
 
