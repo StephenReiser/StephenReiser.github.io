@@ -123,19 +123,37 @@ const headerAndImage = (data, i) => {
 
 const picHoverFunc = (event) => {
 
-///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  It might be weird on the mobile view if this gets shrunk
-let frontHeight = $('.recipePic').outerHeight();
-let backHeight = $('.recipeInfo').outerHeight();
+///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  THIS WORKS ON MOBILE BUT IS BUGGY IF YOU CHANGE THE SIZE OF THE SCREEN LATER
+let frontHeight = $('.recipePic').height();
+let backHeight = $('.recipeInfo').height();
 
 if (frontHeight > backHeight) {
     $('recipeInfo').height(frontHeight);
 }
-else if (frontHeight > backHeight) {
-    $('.recipeInfo').height(backHeight);
+else if (frontHeight < backHeight) {
+    $('.recipeInfo').height(frontHeight);
 }
 else {
     $('.recipeInfo').height(frontHeight);
 }
+
+///////////////////////////////////////////
+// This section is trying to fix the width
+///////////////////////////////////////////
+let frontWidth = $('.recipePic').outerWidth();
+let backWidth = $('.recipeInfo').outerWidth();
+
+if (frontWidth > backWidth) {
+    $('recipeInfo').width(frontWidth);
+}
+else if (frontWidth < backWidth) {
+    $('.recipeInfo').width(frontWidth);
+}
+else {
+    $('.recipeInfo').width(frontWidth);
+}
+
+
 
 ///this if else is trying to set the height of both sides of the recipes
     $(event.currentTarget).parent().children().eq(1).toggle()
@@ -144,19 +162,19 @@ else {
 
 const infoHoverFunc = (event) => {
     console.log($(event.currentTarget))
-    ///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  It might be weird on the mobile view if this gets shrunk
-let frontHeight = $('.recipePic').outerHeight();
-let backHeight = $('.recipeInfo').outerHeight();
+    ///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  THIS IS NOT WORKING ON MOBILE
+// let frontHeight = $('.recipePic').outerHeight();
+// let backHeight = $('.recipeInfo').outerHeight();
 
-if (frontHeight > backHeight) {
-    $('recipeInfo').height(frontHeight);
-}
-else if (frontHeight > backHeight) {
-    $('.recipeInfo').height(backHeight);
-}
-else {
-    $('.recipeInfo').height(frontHeight);
-}
+// if (frontHeight > backHeight) {
+//     $('recipeInfo').height(frontHeight);
+// }
+// else if (frontHeight > backHeight) {
+//     $('.recipeInfo').height(backHeight);
+// }
+// else {
+//     $('.recipeInfo').height(frontHeight);
+// }
 
 ///this if else is trying to set the height of both sides of the recipes
     $(event.currentTarget).parent().children().eq(0).toggle()
@@ -165,7 +183,7 @@ else {
 
 ///////////////////////////////////////////////////////
 
-//////////// this is the ajax function linked to edamam//////////////// ends up beeing SUPER LONG to include the big if/else statement around the diet restrictions/health restrictions being blank
+//////////// this is the ajax function linked to edamam//////////////// ends up beeing SUPER LONG to include the big if/else statement around the diet restrictions/health restrictions being blank. 
 const findRecipes = () => {
 
 if (dietRestrictions === '' && healthRestrictions === '') {
