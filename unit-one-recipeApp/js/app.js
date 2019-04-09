@@ -240,6 +240,10 @@ if (dietRestrictions === '' && healthRestrictions === '') {
     }
 }).then((data) => {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
+ if (data.hits[0] === undefined) {
+
+    alert(`Please search again`)
+ }
  for (let i = 0; i < data.hits.length; i++) {
   headerAndImage(data,i)  
  }
@@ -267,6 +271,10 @@ if (dietRestrictions === '' && healthRestrictions === '') {
     }
 }).then((data) => {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
+ if (data.hits[0] === undefined) {
+
+    alert(`Please search again`)
+ }
  for (let i = 0; i < data.hits.length; i++) {
   headerAndImage(data,i)  
  }
@@ -321,6 +329,10 @@ if (dietRestrictions === '' && healthRestrictions === '') {
     }
 }).then((data) => {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
+ if (data.hits[0] === undefined) {
+
+    alert(`Please search again`)
+ }
  for (let i = 0; i < data.hits.length; i++) {
   headerAndImage(data,i)  
  }
@@ -337,13 +349,7 @@ const loadMore = (event) => {
     recipeEndCount += 20
     event.preventDefault()
     findRecipes()
-
-
-
-
-
-    
-    }
+}
 
 
 
