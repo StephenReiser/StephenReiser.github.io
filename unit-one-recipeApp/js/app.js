@@ -1,3 +1,19 @@
+//////////trying to get local storage
+favoritesArray = []
+
+
+
+let data = JSON.parse(localStorage.getItem(`items`))
+
+//////////////////////
+
+
+
+
+
+
+
+
 //////////////////Global variables
 let ingredients = ''  //this is a default - need to make it take the input from the submit button.  Probably also need a way to put everything to lower case, remove spaces (apprently it doesn't matter to remove spaces/lowercase) and maybe remove special characters.  I dont even need to add commas 
 
@@ -11,8 +27,6 @@ let dietRestrictions = ''
 let healthRestrictions = ''
 
 ///////these are addtional variables to be included in the search - diet restrictions shoudl be a drop down
-
-
 
 /////////////////////////////////////////
 /////////////////////////////////////////
@@ -127,7 +141,7 @@ $dietDiv.append($dietDivContent).append($dietCloseButton)
 
 //<i class="far fa-thumbs-up"></i>
 
-let $newIcon = $(`<i>`).attr(`class`, `far fa-thumbs-up`)
+let $newIcon = $(`<span>`).attr(`class`, `far fa-thumbs-up`).on(`click`, testButton)
 
 
 $newTextDiv.append($newIcon)
@@ -378,7 +392,7 @@ const modalButton = (event) => {
     recipeStartCount = 0
     recipeEndCount = 20
 //////////////////////
-    findRecipes() //commment this out to make this not run on click
+    // findRecipes() //commment this out to make this not run on click
 }
 
 
@@ -400,10 +414,17 @@ const dietCloseModal = (event) => {
 }
 
 
+const testButton = (event) => {
+    let newbutton = $(event.currentTarget).parent().parent().html()
+     console.log(newbutton)
+    favoritesArray.push(newbutton)
+    localStorage.setItem(`items`, JSON.stringify(favoritesArray))
+    alert(`clicked`)
 
-
-
-
+    //////this seems to work to add stuff to local storage, then it will append it to the other file when we refresh
+    
+    // export {favoritesArray}
+}
 
 
 
@@ -435,6 +456,7 @@ $(`.recipePic`).on(`hover`, picHoverFunc)
 $(`.includeIngredients`).on(`submit`, includeButton)
 $(`.modalIncludeIngredients`).on(`submit`, modalButton)
 $(`.moreRecipesButton`).on(`click`,loadMore)
+
 
 
 })  //////end doc on ready func
