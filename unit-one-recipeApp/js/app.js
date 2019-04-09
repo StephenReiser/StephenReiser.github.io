@@ -121,8 +121,17 @@ let $dietCloseButton = $(`<button>`).attr(`class`, `dietCloseButton`).text(`Back
 
 $dietDiv.append($dietDivContent).append($dietCloseButton)
 
+/////////////////////////////////////////////////////////
+//////////Adding in a second button here to favorite
 
-/////////////Modal works - need to add in a list or something for data.hits[i].recipe.cautions[caution array] and data.hits[i].recipe.dietLabels[dietLabels]
+
+//<i class="far fa-thumbs-up"></i>
+
+let $newIcon = $(`<i>`).attr(`class`, `far fa-thumbs-up`)
+
+
+$newTextDiv.append($newIcon)
+
 //////////////////////////////////////////////////////////
     
 

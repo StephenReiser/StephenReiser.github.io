@@ -272,6 +272,11 @@ li {
  /* ------------------------------------------------------------------------------------------------------------------THIS IS CSS FOR THE DIET BUTTON MODAL ---------------------------------------------------------*/
 .dietButton {
     margin: 3%;
+    float: right;
+}
+.far {
+  padding: 3%;
+  
 }
  .dietDiv {
     display: none; /* Hidden by default */
