@@ -103,6 +103,7 @@
     /* overflow-y: hidden; */
     position: relative; 
     /* trying position relative to pin the header to the bototm */
+    background-color: rgb(242,242,242);
 }
 
 .recipeInfo > div {
@@ -144,11 +145,11 @@ a {
 
 /* This is for the list items and the UL */
 ul {
-    list-style-type: none;
+    /* list-style-type: none; */
     text-align: left;
     margin: 0;
-    padding: 2% 0 0 2%;
-    background-color: white;
+    padding: 1% 0 0 3%;
+    background-color: rgb(#DCDCDC);
     font-size: .8em;
     width: 97%;
     overflow: scroll;
@@ -181,8 +182,8 @@ li {
 
 */
 
-/* modal css */
-/* The Modal (background) */
+/* ------------------- Main modal ----------------------- ----------------------------------------------------------*/
+
 .modal {
     /* display: none; Hidden by default */
     position: fixed; /* Stay in place */
@@ -203,30 +204,40 @@ li {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 1%;
     outline: 1px solid #888;
-    width: 45%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
     height: 42%;
     text-align: center;
     font-size: .8em;
+    background-image:url('../images/cuttingboard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
   }
+ 
   
   #modal-input {
       width: 60%;
-      padding: 3%;
-      margin: 2%;
+      padding: 1%;
+      margin: 1%;
       font-size: 1.25em;
+      text-align: center;
       /* height: 10%; */
+  }
+  .modalPIntro {
+      font-size: 1.2em;
   }
 
   #modal-submit {
       width: 50%;
-      margin: 5% 2% 2% 2%;
+      margin: 2% auto;
       font-size: 1em;
-      background-color: #e9f5f8;
+      background-color: rgb(140,190,100);
       height: 10%;
-      outline: 2px solid black;
+      border: 1px solid black;
       /* box-shadow: 5px 5px rgba(0,0,0,0.3); */
       cursor: pointer;
       padding: 2%;
+      /* border-radius: 20%; */
       
   }
 
@@ -235,7 +246,7 @@ li {
     width: 65%; */
     /* background-color: cadetblue; */
     font-weight: 550;
-    background-color: #daedf4;
+    background-color: rgb(100, 180, 90);
   }
 
   #modal-exclude, #modalDietRestrictions, #modalHealthRestrictions {
@@ -245,7 +256,9 @@ li {
 
 
  /* ------------------------------------------------------------------------------------------------------------------THIS IS TEST CSS FOR THE DIET BUTTON MODAL ---------------------------------------------------------*/
-
+.dietButton {
+    margin: 3%;
+}
  .dietDiv {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -301,14 +314,22 @@ li {
         width: 60%; /* made this larger so the items on the screen aren't squished. */
         height: 40%;
         text-align: center;
-        font-size: .8em;
+        font-size: .5em;
+        
       }
       #modal-input {
         width: 60%;
         padding: 3%;
         margin: 2%;
-        /* font-size: .8em;
-        height: 10%; */
+        font-size: 1.6em;
+        
+    }
+    .modalPIntro {
+        font-size: 1em;
+    }
+    #modal-exclude, #modalDietRestrictions, #modalHealthRestrictions {
+        width: 27%;
+        font-size: .5em;
     }
 
     /* Modal sizing seems fine - could make the bars a bit different - but in terms of a work version, seems fine */

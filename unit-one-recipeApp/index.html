@@ -19,17 +19,17 @@
 <div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-      <p>What would you like to cook with today? </p>
+      <p class = 'modalPIntro'>What would you like to cook with today? </p>
       <!-- Input Ingredients: -->
+      
       <div class='modalInput'>
           <form class='modalIncludeIngredients'>
               <input type="text" id="modal-input" autofocus="on" placeholder="Search Ingredients"/>
-              
-          </br>
-          Want to be more specific?
-        </br>
+          <p class='modalPQuestion'>Want to be more specific?</p>
          <input type="text" id="modal-exclude" placeholder="Exclude Ingredients"/>
               <!-- Not sure if this will work in a form - but there are 10 'health' options to choose from in the free version of the API -->
+
+               <!-- there is a thing called input name = checkbox rather than select -->
               <select id='modalDietRestrictions'>
                   <option value=''>Diet Restrictions</option>
                   <option value="balanced">Balanced</option>
