@@ -299,7 +299,7 @@ li {
   
   /* The Close Button */
   .dietCloseButton {
-    color: #aaa;
+    color: white;
     /* float: bottom; */
     width: 95%;
     font-size: 1em;
@@ -309,7 +309,12 @@ li {
     position: absolute;
     bottom: 0;
     margin: 1%;
+    background: darkgrey;
 
+  }
+  .dietCloseButton:hover {
+    border: 2px solid black;
+    background: rgb(110,110,110)
   }
 
 

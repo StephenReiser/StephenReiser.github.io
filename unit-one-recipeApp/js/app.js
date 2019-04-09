@@ -59,7 +59,7 @@ const headerAndImage = (data, i) => {
      let recipeImageURL = data.hits[i].recipe.image
      const $recipeImage = $(`<img>`).attr(`src`, recipeImageURL).attr(`alt`, recipeName)
      let $header = $(`<h3>`)
-     const $aTag = $(`<a>`).attr(`href`, recipeURL).text(recipeName)
+     const $aTag = $(`<a>`).attr(`href`, recipeURL).attr(`target`, `_blank`).text(recipeName)
      $header.append($aTag)
      let $mainDiv = $(`<div>`).addClass(`singleRecipe`)
      let $newImageDiv = $(`<div>`).addClass(`recipePic`).on(`mouseenter`, picHoverFunc).append($recipeImage).append($header)
@@ -69,7 +69,7 @@ const headerAndImage = (data, i) => {
      /////this shoudl add a header to the List:
      let $infoHeader = $(`<h3>`)
      let $infoDiv = $(`<div>`)
-     const $infoATag = $(`<a>`).attr(`href`, recipeURL).text(recipeName)
+     const $infoATag = $(`<a>`).attr(`href`, recipeURL).attr(`target`, `_blank`).text(recipeName)
      $infoHeader.append($infoATag)
      $infoDiv.append($infoHeader)
 
@@ -369,7 +369,7 @@ const modalButton = (event) => {
     recipeStartCount = 0
     recipeEndCount = 20
 //////////////////////
-    // findRecipes() //comented out to make this not run on click for now
+    findRecipes() //commment this out to make this not run on click
 }
 
 
