@@ -159,23 +159,6 @@ $newTextDiv.append($newIcon)
     }
 
 
-/////////////for the image I want them liek this:
-//<a href="default.asp">
-//  <img src="smiley.gif" alt="HTML tutorial"
-//  </a>
-
-//for now i'll use an h2 or something that is a link
-
-
-///////////////////////////////////////////////////////
-/////       I want to include a way to toggle the divs on /////       hover.  shoudl be able to do toggle and on    /////            hover
-////
-////
-///
-/////////////////////////////////////////////////////////
-
-
-
 //////////////////////These two functions 'flip' the pictures to display a recipe'.  Currently being used on click - probably should do it on hover I want to change this to on hover or mouseenter.  probably need to target the parent div if this is mouse enter/////////////////////////////////////////////////////////////////////////////
 
 const picHoverFunc = (event) => {
@@ -219,7 +202,7 @@ else {
 
 const infoHoverFunc = (event) => {
     console.log($(event.currentTarget))
-    ///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  THIS IS NOT WORKING ON MOBILE
+    ///////since this stuff is on the back, don't need to reset any heigh/width
 // let frontHeight = $('.recipePic').outerHeight();
 // let backHeight = $('.recipeInfo').outerHeight();
 
@@ -265,7 +248,7 @@ if (dietRestrictions === '' && healthRestrictions === '') {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
  if (data.hits[0] === undefined) {
 
-    alert(`Please search again`)
+    badSpelling()
  }
  for (let i = 0; i < data.hits.length; i++) {
   headerAndImage(data,i)  
@@ -296,7 +279,7 @@ if (dietRestrictions === '' && healthRestrictions === '') {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
  if (data.hits[0] === undefined) {
 
-    alert(`Please search again`)
+    badSpelling()
  }
  for (let i = 0; i < data.hits.length; i++) {
   headerAndImage(data,i)  
@@ -325,6 +308,10 @@ if (dietRestrictions === '' && healthRestrictions === '') {
     }
 }).then((data) => {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
+ if (data.hits[0] === undefined) {
+
+    badSpelling()
+ }
  for (let i = 0; i < data.hits.length; i++) {
   headerAndImage(data,i)  
  }
@@ -354,7 +341,7 @@ if (dietRestrictions === '' && healthRestrictions === '') {
  console.log(data.hits[0]) //to get to recipes its data.hits[i]
  if (data.hits[0] === undefined) {
 
-    alert(`Please search again`)
+    badSpelling()
  }
  for (let i = 0; i < data.hits.length; i++) {
   headerAndImage(data,i)  
@@ -392,7 +379,7 @@ const modalButton = (event) => {
     recipeStartCount = 0
     recipeEndCount = 20
 //////////////////////
-    // findRecipes() //commment this out to make this not run on click
+    findRecipes() //commment this out to make this not run on click
 }
 
 
@@ -440,13 +427,16 @@ const favoriteButton = (event) => {
 
     //////this seems to work to add stuff to local storage, then it will append it to the other file when we refresh
 
-
-
-    /////wonder If i could do something like target new button to 
-    
-    // export {favoritesArray}
 }
 
+
+
+/////////////////////////////////////////////////////////////////////////////////////////This function is to make the modal pop back up when some one puts in a bad string in the search bar/////////////////////////////////////////////////////
+
+const badSpelling = () => {
+    alert(`Could not find anything, please check your spelling and search again`)
+        $(`#myModal`).toggle()
+}
 
 
 
@@ -462,8 +452,8 @@ $(() => { /////start doc on ready func
     
 /////////////////////These functions are to make the on hover work on the dummy divs
 ////////////////////////////////////////////////////////
-$(`.recipeInfo`).on(`hover`,infoHoverFunc)
-$(`.recipePic`).on(`hover`, picHoverFunc)
+// $(`.recipeInfo`).on(`hover`,infoHoverFunc)
+// $(`.recipePic`).on(`hover`, picHoverFunc)
 //////////////////////////////////////////////////////////
 ///////////////////////////////////////////
 
@@ -487,7 +477,3 @@ $(`.moreRecipesButton`).on(`click`,loadMore)
 
 
 
-
-
-/////////////////////////////////////////////////////////
-//Deva thinks I need to add in a error on search function////////////////////////////////////////////////////////////////////////////////////////////

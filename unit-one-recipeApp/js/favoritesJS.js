@@ -155,7 +155,7 @@ console.log(storageData[0])
 testingnewArray()
 $(`.recipePic`).on(`mouseenter`,picFavoriteHover)
 $(`.recipeInfo`).on(`mouseleave`, favoriteHover)
-// favoritePics()
+favoritePics()
 
 
 
