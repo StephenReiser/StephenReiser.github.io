@@ -8,3 +8,21 @@
     margin: 2%; */
    
 /* } */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: darkgray;
+}
+.headerHeader {
+    width: 70%;
+    text-align: center;
+    padding: 2%;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.titleLogo:hover {
+    font-weight: 700;
+  background-color: rgb(100, 180, 90)
+}

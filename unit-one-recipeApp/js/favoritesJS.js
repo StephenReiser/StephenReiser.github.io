@@ -4,6 +4,38 @@ let storageData = JSON.parse(localStorage.getItem(`items`))
 
 
 const favoriteHover = () => {
+
+    let frontHeight = $(event.currentTarget).parent().height();
+let backHeight = $(event.currentTarget).parent().children().eq(1).height();
+
+if (frontHeight > backHeight) {
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
+}
+else if (frontHeight < backHeight) {
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
+}
+else {
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
+}
+
+///////////////////////////////////////////
+// This section is trying to fix the width
+///////////////////////////////////////////
+let frontWidth = $(event.currentTarget).parent().outerWidth();
+let backWidth = $(event.currentTarget).parent().children().eq(1).outerWidth();
+
+if (frontWidth > backWidth) {
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
+}
+else if (frontWidth < backWidth) {
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
+}
+else {
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
+}
+
+
+
     $(event.currentTarget).parent().children().eq(0).css(`display`, `block`)
     $(event.currentTarget).css(`display`, `none`)
     
@@ -12,6 +44,36 @@ const favoriteHover = () => {
 
 
 const picFavoriteHover = () => {
+
+    let frontHeight = $(event.currentTarget).parent().height();
+let backHeight = $(event.currentTarget).parent().children().eq(1).height();
+
+if (frontHeight > backHeight) {
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
+}
+else if (frontHeight < backHeight) {
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
+}
+else {
+    $(event.currentTarget).parent().children().eq(1).height(frontHeight);
+}
+
+///////////////////////////////////////////
+// This section is trying to fix the width
+///////////////////////////////////////////
+let frontWidth = $(event.currentTarget).parent().outerWidth();
+let backWidth = $(event.currentTarget).parent().children().eq(1).outerWidth();
+
+if (frontWidth > backWidth) {
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
+}
+else if (frontWidth < backWidth) {
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
+}
+else {
+    $(event.currentTarget).parent().children().eq(1).width(frontWidth);
+}
+
     $(event.currentTarget).parent().children().eq(1).toggle()
     $(event.currentTarget).toggle()
    
