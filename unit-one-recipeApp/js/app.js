@@ -15,12 +15,12 @@ let data = JSON.parse(localStorage.getItem(`items`))
 
 
 //////////////////Global variables
-let ingredients = ''  //this is a default - need to make it take the input from the submit button.  Probably also need a way to put everything to lower case, remove spaces (apprently it doesn't matter to remove spaces/lowercase) and maybe remove special characters.  I dont even need to add commas 
+let ingredients = ''  //this is a default - need to make it take the input from the submit button.  apprently it doesn't matter to remove spaces/lowercase or special characters.  I dont even need to add commas 
 
 let recipeStartCount = 99
 let recipeEndCount = 99
 
-////These are the number of recipes to load on click.  the includeButton function is setting these to 0 and 10.  The load more button is incrementing each by 10 - so on load 10 are loaded and then each time user clicks load more, 10 more are loaded.
+////These are the number of recipes to load on click.  the includeButton function is setting these to 0 and 20.  The load more button is incrementing each by 20 - so on load 20 are loaded and then each time user clicks load more, 20 more are loaded.
 
 let excludeIngredients = ''
 let dietRestrictions = ''
@@ -28,11 +28,6 @@ let healthRestrictions = ''
 
 ///////these are addtional variables to be included in the search - diet restrictions shoudl be a drop down
 
-/////////////////////////////////////////
-/////////////////////////////////////////
-//would it make sense to allow user to select number of recipes shown
-/////////////////////////////////////////
-/////////////////////////////////////////
 
 ////////include button currently is assigning the input from the text box to the ingredients variable which gets assinged to the findrecipe function - so we can update what we searched for
 
@@ -104,7 +99,7 @@ const headerAndImage = (data, i) => {
     }
 
 //////////////////////////////////////////////////////////
-////////////This section is a test - I want to add a button above ingredients that then will dispaly a pop up of dietary stuff
+////////////This section adds in the more info button to get diet restrictions
 
 
 let $dietButton = $(`<button>`).attr(`class`, `dietButton`).text(`Get More Info!`).on(`click`, dietButtonModal)
@@ -139,8 +134,6 @@ $dietDiv.append($dietDivContent).append($dietCloseButton)
 //////////Adding in a second button here to favorite
 
 
-//<i class="far fa-thumbs-up"></i>
-
 let $newIcon = $(`<span>`).attr(`class`, `far fa-thumbs-up`).on(`click`, favoriteButton)
 
 
@@ -159,11 +152,11 @@ $newTextDiv.append($newIcon)
     }
 
 
-//////////////////////These two functions 'flip' the pictures to display a recipe'.  Currently being used on click - probably should do it on hover I want to change this to on hover or mouseenter.  probably need to target the parent div if this is mouse enter/////////////////////////////////////////////////////////////////////////////
+//////////////////////These two functions 'flip' the pictures to display a recipe'.  /////////////////////////////////////////////////////////////////////////////
 
 const picHoverFunc = (event) => {
 
-///////this if else func is trying to set the height of both sides of the recipes - seems to mostly work until all 3 divs in a row get hovered, then they shrink by to the tallest on the ingredients side.  THIS WORKS ON MOBILE BUT IS BUGGY IF YOU CHANGE THE SIZE OF THE SCREEN LATER
+///////this if else func is trying to set the height of both sides of the recipes ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let frontHeight = $(event.currentTarget).parent().height();
 let backHeight = $(event.currentTarget).parent().children().eq(1).height();
 
@@ -195,13 +188,15 @@ else {
 
 
 
-///this if else is trying to set the height of both sides of the recipes
+///^^this if else is trying to set the height of both sides of the recipes
+
+/////now that hieght/width is set, toggles dispaly on btoh sides of the card
     $(event.currentTarget).parent().children().eq(1).toggle()
     $(event.currentTarget).toggle()
 }
 
 const infoHoverFunc = (event) => {
-    console.log($(event.currentTarget))
+    // console.log($(event.currentTarget))
     ///////since this stuff is on the back, don't need to reset any heigh/width
 // let frontHeight = $('.recipePic').outerHeight();
 // let backHeight = $('.recipeInfo').outerHeight();
@@ -216,7 +211,7 @@ const infoHoverFunc = (event) => {
 //     $('.recipeInfo').height(frontHeight);
 // }
 
-///this if else is trying to set the height of both sides of the recipes
+///this if else is trying to set the height of both sides of the recipes - not needed as height is set on the first hover - just need to toggle
     $(event.currentTarget).parent().children().eq(0).toggle()
     $(event.currentTarget).toggle()
 }
@@ -245,7 +240,7 @@ if (dietRestrictions === '' && healthRestrictions === '') {
 
     }
 }).then((data) => {
- console.log(data.hits[0]) //to get to recipes its data.hits[i]
+//  console.log(data.hits[0]) //to get to recipes its data.hits[i]
  if (data.hits[0] === undefined) {
 
     badSpelling()
@@ -276,7 +271,7 @@ if (dietRestrictions === '' && healthRestrictions === '') {
 
     }
 }).then((data) => {
- console.log(data.hits[0]) //to get to recipes its data.hits[i]
+//  console.log(data.hits[0]) //to get to recipes its data.hits[i]
  if (data.hits[0] === undefined) {
 
     badSpelling()
@@ -307,7 +302,7 @@ if (dietRestrictions === '' && healthRestrictions === '') {
 
     }
 }).then((data) => {
- console.log(data.hits[0]) //to get to recipes its data.hits[i]
+//  console.log(data.hits[0]) //to get to recipes its data.hits[i]
  if (data.hits[0] === undefined) {
 
     badSpelling()
@@ -338,7 +333,7 @@ if (dietRestrictions === '' && healthRestrictions === '') {
 
     }
 }).then((data) => {
- console.log(data.hits[0]) //to get to recipes its data.hits[i]
+//  console.log(data.hits[0]) //to get to recipes its data.hits[i]
  if (data.hits[0] === undefined) {
 
     badSpelling()
@@ -353,6 +348,9 @@ if (dietRestrictions === '' && healthRestrictions === '') {
 }
 }
 ///////////end ajax function////////////////////////////////
+///////////end ajax function////////////////////////////////
+///////////end ajax function////////////////////////////////
+///////////end ajax function////////////////////////////////
 
 const loadMore = (event) => {
     recipeStartCount += 20
@@ -361,7 +359,7 @@ const loadMore = (event) => {
     findRecipes()
 }
 
-
+///////////This section is loading more events - it is setting recipe start and end counts and then running findRecipes////////////////////////////////
 
 ////////////////////////////////////////////////////////
 ///This section is for the Modal to get the data input and then run the ajax function
@@ -379,7 +377,7 @@ const modalButton = (event) => {
     recipeStartCount = 0
     recipeEndCount = 20
 //////////////////////
-    findRecipes() //commment this out to make this not run on click
+    // findRecipes() //commment this out to make this not run on click
 }
 
 
@@ -390,18 +388,20 @@ const modalButton = (event) => {
 
 const dietButtonModal = (event) => {
     let hiddenDiv = $(event.currentTarget).parent().children().eq(2)
-    console.log(hiddenDiv)
+    // console.log(hiddenDiv)
     hiddenDiv.toggle()
 }
 
 const dietCloseModal = (event) => {
     let hiddenDiv = $(event.currentTarget).parent()
-    console.log(hiddenDiv)
+    // console.log(hiddenDiv)
     hiddenDiv.toggle()
 }
 
 
 const favoriteButton = (event) => {
+
+    $(event.currentTarget).css(`border`, `1px solid black`).css(`background`, `lightgreen`)
     let newbutton = $(event.currentTarget).parent().parent().html()
     let $copyDiv = $(`<div>`).addClass(`singleRecipe`)
     $copyDiv.append(newbutton)
@@ -420,10 +420,10 @@ const favoriteButton = (event) => {
 
 
 
-     console.log(newbutton)
+    //  console.log(newbutton)
     favoritesArray.push($copyHtml)
     localStorage.setItem(`items`, JSON.stringify(favoritesArray))
-    alert(`clicked`)
+    // alert(`clicked`)
 
     //////this seems to work to add stuff to local storage, then it will append it to the other file when we refresh
 
