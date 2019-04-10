@@ -93,9 +93,9 @@ console.log(storageData[0])
 testingnewArray()
 $(`.recipePic`).on(`mouseenter`,picFavoriteHover)
 $(`.recipeInfo`).on(`mouseleave`, favoriteHover)
-favoritePics()
+// favoritePics()
 
-/////only real issue is stuff gets flipped right now after I remove something and the refresh it
+
 
 
 })
