@@ -27,13 +27,14 @@
     
 }
 
+
 .includeIngredients {
-  width: 75%;
+  width: 60%;
   padding: 2%;
 }
 
-.favoriteALink {
-  width: 20%;
+.favoriteALink, .titleLogo {
+  width: 15%;
   background: rgb(140,190,100);
   /* min-height: 100%; */
   color: white;
