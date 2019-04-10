@@ -21,9 +21,18 @@ const favoritePics = () => {
     $(`.recipePic`).toggle()
 }
 
+const removeFavorite = (event) => {
+    let $divToRemove = $(event.currentTarget).parent().parent()
+    $divToRemove.remove()
+}
+
+///////////////This removes it from the page but not from local storage
+
 const testingnewArray = () => {
    for (let i = 0; i < storageData.length; i++) {
     $(`.recipeBox`).append(storageData[i])
+    $(`span`).remove()
+    $(`button`).text(`Remove from Favorites`).addClass(`favoriteRemoveButton`).on(`click`, removeFavorite)
     
     
     

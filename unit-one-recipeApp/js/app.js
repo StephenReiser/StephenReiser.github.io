@@ -402,7 +402,7 @@ const modalButton = (event) => {
 //////////////////////////////////////////////////////////Diet Info Modal Button on click functions
 
 const dietButtonModal = (event) => {
-    let hiddenDiv = $(event.currentTarget).parent().children().eq(1)
+    let hiddenDiv = $(event.currentTarget).parent().children().eq(2)
     console.log(hiddenDiv)
     hiddenDiv.toggle()
 }

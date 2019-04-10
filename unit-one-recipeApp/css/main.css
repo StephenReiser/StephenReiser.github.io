@@ -276,6 +276,7 @@ li {
 }
 .far {
   padding: 3%;
+  cursor: pointer;
   
 }
  .dietDiv {
@@ -530,3 +531,9 @@ might be unnecessary but seems like I shoudl be doing this, maybe makes sense---
 
 
    /* Need to add favorite link and  header to favorite page*/
+
+   .favoriteRemoveButton {
+     width: 95%;
+     cursor: pointer;
+     padding: 1%;
+   }
