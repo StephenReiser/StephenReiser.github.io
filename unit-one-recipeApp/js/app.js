@@ -141,7 +141,7 @@ $dietDiv.append($dietDivContent).append($dietCloseButton)
 
 //<i class="far fa-thumbs-up"></i>
 
-let $newIcon = $(`<span>`).attr(`class`, `far fa-thumbs-up`).on(`click`, testButton)
+let $newIcon = $(`<span>`).attr(`class`, `far fa-thumbs-up`).on(`click`, favoriteButton)
 
 
 $newTextDiv.append($newIcon)
@@ -414,14 +414,35 @@ const dietCloseModal = (event) => {
 }
 
 
-const testButton = (event) => {
+const favoriteButton = (event) => {
     let newbutton = $(event.currentTarget).parent().parent().html()
+    let $copyDiv = $(`<div>`).addClass(`singleRecipe`)
+    $copyDiv.append(newbutton)
+    let masterDiv = $(`<div>`).append($copyDiv)
+
+    
+
+    let $copyHtml = masterDiv.html()
+
+///////this all seems like a fix to get all pieces of the div added - slight weirdness but mostly seems ok
+
+
+
+
+
+
+
+
      console.log(newbutton)
-    favoritesArray.push(newbutton)
+    favoritesArray.push($copyHtml)
     localStorage.setItem(`items`, JSON.stringify(favoritesArray))
     alert(`clicked`)
 
     //////this seems to work to add stuff to local storage, then it will append it to the other file when we refresh
+
+
+
+    /////wonder If i could do something like target new button to 
     
     // export {favoritesArray}
 }
