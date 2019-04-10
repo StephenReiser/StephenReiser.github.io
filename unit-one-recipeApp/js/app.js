@@ -377,7 +377,7 @@ const modalButton = (event) => {
     recipeStartCount = 0
     recipeEndCount = 20
 //////////////////////
-    // findRecipes() //commment this out to make this not run on click
+    findRecipes() //commment this out to make this not run on click
 }
 
 
