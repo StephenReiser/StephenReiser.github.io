@@ -426,7 +426,7 @@ li {
     }
     .singleRecipe {
         width: auto;
-        margin-top: 15%;
+        margin-top: 20%;
     }
     .recipeInfo > div {
         position: absolute;
@@ -436,6 +436,10 @@ li {
     .recipePic > h3, .recipeInfo > div > h3 {
         font-size: 1em;
     }
+    .favoriteALink, .titleLogo {
+      font-size: .7em;
+      
+      }
 
   }
 
@@ -459,6 +463,7 @@ might be unnecessary but seems like I shoudl be doing this, maybe makes sense---
 
         /* this pins the header to the bototm on the back of the card */
     }
+   
 }
 
 
