@@ -13,6 +13,8 @@ header {
     display: flex;
     justify-content: center;
     background: darkgray;
+    top: 0;
+    position: fixed;
 }
 .headerHeader {
     width: 70%;
