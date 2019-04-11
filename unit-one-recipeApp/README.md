@@ -3,7 +3,7 @@ Recipe App
 
 ### About this App
 
-Recipe App allos users to serach a database of recipes by inputting ingredients they have on hand.  Users can refine their search by entering additional criteria, including health and diet restrictions, or by excluding specific ingredients.
+Recipe App allows users to search a database of recipes by inputting ingredients they have on hand.  Users can refine their search by entering additional criteria, including health and diet restrictions, or by excluding specific ingredients.
 
 
 ### Instructions
