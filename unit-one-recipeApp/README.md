@@ -3,38 +3,41 @@ Recipe App
 
 ### About this App
 
-Recipe app is a simple search app allowing a user to input ingredients and return a list of recipes that fit the criteria.  A more detailed search can be made by including diet restrictions, health restriction, or by excluding ingredients
+Recipe App allos users to serach a database of recipes by inputting ingredients they have on hand.  Users can refine their search by entering additional criteria, including health and diet restrictions, or by excluding specific ingredients.
 
 
 ### Instructions
-Using this app is simple.  First input any ingredients you would like to cook with, no need to worry about commas.  As soon as you are ready click on Get Recipes!
+Using this app is simple.  First input any ingredients you would like to cook with (no need to worry about commas or other punctuation).  Click Get Recipes! for a curated selection of recipes that include your ingredients.
 
 ![alt text](https://github.com/StephenReiser/StephenReiser.github.io/blob/master/unit-one-recipeApp/images/Instruction%20images/Search%20Ingredients.png "Search for Ingredients")
 
-Exclude Ingredients, Diet Restrictions and Health Restrictions are optional, feel free to use them to restrict your search.
+If you would ike to be more specific, you can restrict your search by using the Exclude Ingredients search or Diet Restrictions and Health Restricitons drop down.
 
-Once you search, feel free to hover over each picture to see a list of ingredients.  If you really like one, click the thumbs up to favorite it.  You can also click on the Get More Info button to see specific diet and health restrictions.
+To see a list of ingredients included in any given recipe, hover over the accompanying photo.  If you really like a recipe, click the thumbs up icon to save it to you Favorittes.  you can also click the Get More Info button to view diet and health restrictions.
 
 ![alt text](https://github.com/StephenReiser/StephenReiser.github.io/blob/master/unit-one-recipeApp/images/Instruction%20images/Hover%20and%20Favorite.png "Favorites and Diets")
 
-At any time, you can also click on the grey recipe title to get a link to the external website that created the recipe.
+At any time, you can click on the grey recipe title, which will redirect you to the original recipe site.
 
-To load more recipes, scroll to the bottom and click Load More Recipes
+For more recipes, scroll to the bototm and click Load More Recipes
 
 ![alt text](https://github.com/StephenReiser/StephenReiser.github.io/blob/master/unit-one-recipeApp/images/Instruction%20images/Load%20More.png "Load More")
 
-To make a new search or to view your Favorites use the Nav Bar at the top of the screen.
+To view your Favorites, use the Nav Bar at the top
 
 ![alt text](https://github.com/StephenReiser/StephenReiser.github.io/blob/master/unit-one-recipeApp/images/Instruction%20images/Nav%20Bar.png "Nav Bar")
 
-The Favorites page will save all of the recipes you clicked thumbs up.  To remove a recipe from the list simply hover over it and click 'Remove from Favorites'
+The Favorites page stores recipes you gave a thumbs up to.  Hover over a recipe and click Remove from Favorites if you no longer want a recipe on your Favorites page.
 
 ![alt text](https://github.com/StephenReiser/StephenReiser.github.io/blob/master/unit-one-recipeApp/images/Instruction%20images/Remove%20Button.png "Remove from Favorites")
 
 
 
+### Other Notes
 
+This app is built using jQuery, CSS, and some HTML.  The majority of the functionality and content is created through jQuery.  Each recipe essentially has 3 cards - A picture, a list of ingredients, and a list of diet/health restrictions.
 
+The main modal appears on load or if a search is invalid. The idea of the modal is to force the user to make an action.  Currently, this app loads 20 recipes at a time, this can be toggled via the code.
 
 
 ### Built With
