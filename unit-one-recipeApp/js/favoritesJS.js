@@ -131,28 +131,19 @@ const removeFavorite = (event) => {
 
 ///////////////This removes it from the page but not from local storage
 
-const testingnewArray = () => {
+const rebuildLocalStorage = () => {
    for (let i = 0; i < storageData.length; i++) {
     $(`.recipeBox`).append(storageData[i])
     $(`span`).remove()
     $(`button`).text(`Remove from Favorites`).addClass(`favoriteRemoveButton`).on(`click`, removeFavorite)
-    
-    
-    
    }
-
-    //this seems to work
 }
-
-//////Can I make it so the pictures are displayed?
-
-////////////In here probably could write some code to make the stuff on hover to work.  buttons also don't quite seem to work
 
 
 $(() => {
 
 console.log(storageData[0])
-testingnewArray()
+rebuildLocalStorage()
 $(`.recipePic`).on(`mouseenter`,picFavoriteHover)
 $(`.recipeInfo`).on(`mouseleave`, favoriteHover)
 favoritePics()
