@@ -2,14 +2,11 @@
     font-family: sans-serif;
 }
 
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }  
-
-
 
 
 /* container includes inpt box, the div that recipes get appended to and the footer */
@@ -58,11 +55,6 @@
 
 /* input form includes the input forms - want it to stretch across the entire screen and fill the screen on load */
 
-/* THis section is for the input within the form */
-#input-box {
-    
-}
-
 
 
 .recipeBox {
@@ -85,28 +77,16 @@
     margin: 2%;
    
 }
-
-.singleRecipe:hover {
-
-}
-
 /* single Recipe is the div for the indiviudal recipe divs it will contain two divs - first including the pic, second including some info */
 
 .recipePic {
     height: 40%;
     width: 100%;
     background-size: contain;
-    /* display: flex; */
-    /* overflow: hidden; */
-    /* align-items: center; */
     object-fit: cover;
     overflow: hidden;
     white-space: nowrap;
     background-color: darkgrey;
-    /* flex-basis: 0; */
-    /* position: relative; */
-   
-    
 
     
 }
@@ -116,6 +96,12 @@
     text-overflow: ellipsis;
     font-size: .8em;
 }
+
+/* .recipePic > h3:hover, .recipeInfo > div > h3:hover {
+  overflow: visible;
+  white-space: wrap;
+  height: 30%;
+} */
 .recipePic > img {
     max-width: 100%;
     max-height: 100%;
@@ -175,8 +161,6 @@
 /* recipeInfo is the div within singleRecipe containing ingredients and information probably shoudl make the header a link to the website*/
 
 
-
-
 footer {
   text-align: center;
 }
@@ -214,17 +198,6 @@ ul {
 li {
     width: 90%;
 }
-
-
-
-
-
-/* Things to add:
-
-1. fix load more button
-2. fix the more info div
-
-
 
 
 */
@@ -356,8 +329,6 @@ li {
     background: rgb(110,110,110)
   }
 
-
-
   /* ------------------------------------------------------- ---------------This is CSS for LOAD MORE BUTTON-------- ------------------------------------------------------- */
   .loadMore {
       width: 100%;
@@ -382,11 +353,7 @@ li {
     font-weight: 550;
     background-color: rgb(100, 180, 90);
 
-
-
   }
-
-
 
   /* ---------------------------------------------------------------------------Mobile CSS: --------------------- --------------------------------------------------------*/
   
@@ -550,58 +517,10 @@ might be unnecessary but seems like I shoudl be doing this, maybe makes sense---
   }
 
 
-
-
-
-
-
-
-
   /* ---------------------------------------------------------------------------CSS Animations--------------------- --------------------------------------------------------*/
   
-   /* RecipeINfo card flip */
-
-   /* @-webkit-keyframes flipRecipe {
-    
-    0% {
-        -webkit-transform: rotateX(0);
-                transform: rotateX(0);
-      }
-      100% {
-        -webkit-transform: rotateX(-180deg);
-                transform: rotateX(-180deg);
-      }
-    } */
     @keyframes flipRecipe {
-        
-      /* 0% {
-        
-        -webkit-transform: rotateY(0);
-                transform: rotateY(0);
-                
-      }
-      25% {
-        -webkit-transform: rotateY(-90);
-        transform: rotateY(-90);
-      }
-      50% {
-        -webkit-transform: rotateY(-180deg);
-        transform: rotateY(-180deg);
 
-      }
-      75% {
-        -webkit-transform: rotateY(-270deg);
-        transform: rotateY(-270deg);
-
-      }
-      100% {
-        -webkit-transform: rotateY(-360deg);
-                transform: rotateY(-360deg);
-                
-      } */
- /* this whole section works to flip the card - I dont really like it, */
-      /* from { opacity: 0;}
-      to {opacity: 1} */
         0% {
           -webkit-transform: rotateY(-80deg);
                   transform: rotateY(-80deg);
@@ -614,23 +533,6 @@ might be unnecessary but seems like I shoudl be doing this, maybe makes sense---
         }
       }
       
-
-
-    
-    
-    
-   
-
-
-/* 
-	.testLink {
-    background: black;
-
-  } */
-
-
-
-   /* Need to add favorite link and  header to favorite page*/
 
    .favoriteRemoveButton {
      width: 95%;
