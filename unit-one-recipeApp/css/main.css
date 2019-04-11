@@ -516,6 +516,35 @@ might be unnecessary but seems like I shoudl be doing this, maybe makes sense---
     .includeIngredients > * {
       font-size: 1.15em;
     }
+
+    .modal-content {
+      padding: 2%;
+      outline: 1px solid #888;
+      width: 65%; /* made this larger so the items on the screen aren't squished. */
+      height: 50%;
+      text-align: center;
+      font-size: 1em;
+      
+    }
+    #modal-input {
+      width: 60%;
+      padding: 3%;
+      margin: 2%;
+      font-size: 2.5em;
+      
+  }
+  .modalPIntro {
+      font-size: 2em;
+  }
+  #modal-exclude, #modalDietRestrictions, #modalHealthRestrictions {
+      width: 27%;
+      font-size: 1.5em;
+  }
+
+  .modalPQuestion {
+    font-size: 1.25em;
+  }
+
     
    
   }
