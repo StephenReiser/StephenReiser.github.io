@@ -115,13 +115,6 @@ const removeFavorite = (event) => {
     // console.log($recipeBoxArray.children().eq(0).html())
     }
 
-
-
-
-
-
-
-
     // storageData = []
     // console.log(storageData)
     // localStorage.setItem(`items`, JSON.stringify(storageData))
@@ -142,7 +135,7 @@ const rebuildLocalStorage = () => {
 
 $(() => {
 
-console.log(storageData[0])
+// console.log(storageData[0])
 rebuildLocalStorage()
 $(`.recipePic`).on(`mouseenter`,picFavoriteHover)
 $(`.recipeInfo`).on(`mouseleave`, favoriteHover)
