@@ -291,9 +291,7 @@ li {
   }
 
   #modal-submit:hover {
-    /* height: 15%;
-    width: 65%; */
-    /* background-color: cadetblue; */
+
     font-weight: 550;
     background-color: rgb(100, 180, 90);
   }
@@ -315,33 +313,33 @@ li {
   
 }
  .dietDiv {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none; /* Hidden until button is clicked */
+    position: fixed;
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: auto;
    
     background-color: white;
   }
   
-  /* Modal Content/Box */
+  /* dietContent Modal */
   .dietDivContent {
     background-color: white;
-    /* margin: 2% auto; 15% from the top and centered */
+    
     padding: 2%;
-    /* border: 1px solid #888; */
-    width: 100%; /* Could be more or less, depending on screen size */
+    
+    width: 100%; 
     font-size: .7em;
 
   }
   
-  /* The Close Button */
+  /* The dietClose Button */
   .dietCloseButton {
     color: white;
-    /* float: bottom; */
+ 
     width: 95%;
     font-size: 1em;
     font-weight: bold;
@@ -448,7 +446,7 @@ li {
 
   }
 
-/* ---------------------------------------------------------------------------medium Screen CSS: 
+/* --------------------------------------------------------------------------------------medium Screen CSS: 
 might be unnecessary but seems like I shoudl be doing this, maybe makes sense--------------------- --------------------------------------------------------*/
   
 
@@ -462,14 +460,14 @@ might be unnecessary but seems like I shoudl be doing this, maybe makes sense---
     .singleRecipe {
         width: 40%;
         /* height: 150px; */
-        /* margin-top: 9%; */
+        margin-top: 9%;
     }
-    .singleRecipe:first-child {
+     /* .singleRecipe:first-child {
       margin-top: 9%;
     }
     .singleRecipe:nth-of-type(2n) {
       margin-top: 9%;
-    }
+    } */
     .recipeInfo > div {
         position: absolute;
 
@@ -477,12 +475,6 @@ might be unnecessary but seems like I shoudl be doing this, maybe makes sense---
     }
    
 }
-
-
-
-
-
-
 
 
 
