@@ -39,6 +39,25 @@ This app is built using jQuery, CSS, and some HTML.  The majority of the functio
 
 The main modal appears on load or if a search is invalid. The idea of the modal is to force the user to make an action.  Currently, this app loads 20 recipes at a time, this can be toggled via the code.
 
+Local storage is used to push favorites to the favorites page
 
+
+#### Approach Taken
+
+I wanted to make an app with very few distractions.  SInce it is easy to see a picture and tell if it looks appetizing, I knew I wanted to make the text only appear when a picture was clicked on.  This would remove distractions and make the site appear clean and simple.  By using event listeners, it was easy to control which sets of data were displayed.
+
+By using flexbox I was able to make a clean dynamic grid which seemed to fit my goals.
+
+I also knew I wanted to force the user to input data the second the site was loaded.  By using a modal, the user has to search for something which then forces them to realize how the site works.  Once the search functionality was built, the modal was the next step.
+
+While not initially planned, a feature that made a lot of sense to implement this so it had real world functionality was to add a favorites button.  This allows the user to store favorites for later.
+
+I considered adding in calorie information or nutrition information.  I just felt that the information available would have given an incorrect and incomplete story.  For example, while total calories were listed, number of servings were not.  The nutrition information (grams of fat, Vitamin C % etc) was mostly available, but I thought adding it would make each card a bit too busy.  I also considered adding in a second API to try to pair stuff with wine, but I thought this could make everything appear to cluttered or forced.
+
+Two features that I would have liked to add would be to keep the current search available if a user were to click on favorites and then click back to the search page.  For now, I put in a mini fix so that the links open up a new tab.  The second feature I would have liked to add would be if a user favorites a recipe, the thumbs up would stay green even if they refreshed the browser.  I think I could do this via local storage.  I'm not sure if the API gives each recipe a unique ID. 
+
+#### Link to site
+
+[Link to Recipe App](https://stephenreiser.github.io/unit-one-recipeApp/index.html "Recipe App")
 ### Built With
-All recipes are generated from the Edamam API.
+All recipes are generated from the Edamam API.  There is a cap of 5 searchs/minute in the free version.
