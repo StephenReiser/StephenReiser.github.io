@@ -8,12 +8,6 @@ let data = JSON.parse(localStorage.getItem(`items`))
 //////////////////////
 
 
-
-
-
-
-
-
 //////////////////Global variables
 let ingredients = ''  //this is a default - need to make it take the input from the submit button.  apprently it doesn't matter to remove spaces/lowercase or special characters.  I dont even need to add commas 
 
