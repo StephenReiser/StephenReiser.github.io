@@ -46,7 +46,7 @@ a {
     /* border: 1px solid #00303F */
     background-color: #CAE4DB66;
     /* margin-top: 10%; */
-    margin: 10% 2% 2% 2%;
+    margin: 7% 2% 2% 2%;
     border-radius: 0.3rem;
 }
 
@@ -102,5 +102,10 @@ a:hover {
   @media screen and (min-width:100px) and (max-width:900px){
     .carouselContainer {
         min-height: 750px !important;
+    }
+    .centerHeader {
+      
+        margin: 10% 2% 2% 2%;
+        
     }
  }
