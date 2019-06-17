@@ -73,6 +73,7 @@ nav {
     background-color: #00303F;
     position: fixed;
     top: 0;
+    z-index: 3
 }
 
 .btn:focus, .btn:hover {
