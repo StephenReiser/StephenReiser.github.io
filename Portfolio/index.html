@@ -4,29 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="UTF-8"></script> -->
+    
   <script src='app.js'></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel='stylesheet' href='css/main.css'>
     <title>Stephen Reiser</title>
 </head>
 <body>
+
+    
+        <nav>
+                <div class="nav-wrapper">
+                  <a href="#" class="brand-logo">Stephen Reiser</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#PersonalInfo">About Me</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#ContactInfo">Contact Info</a></li>
+                    <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contact Me</a></li>
+                  </ul>
+                </div>
+              </nav>
+              <header class='centerHeader row'>
+                  <h4>Stephen Reiser</h4>
+                  <h5>Web Developer</h5>
+                  <h5>Contact Info:</h5>
+                  <ul>
+                      <li><a href="./images/StephenReiserResume.pdf" download="StephenReiserResume" target="_blank">Resume</a></li>
+                      <li><a href='https://www.linkedin.com/feed/' target='_blank'>LinkedIn</a></li>
+                      <li><a href='https://github.com/StephenReiser' target='_blank'>Github</a></li>
+                    </ul>
+                    
+                    
+                    
+                </header>
+
+
+  <!-- Modal Trigger -->
+  
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modalSize">
+        
+
+        <form action="mailto:stephen.reiser1@gmail.com" method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name"><br>
+        E-mail:<br>
+        <input type="text" name="mail"><br>
+        Comment:<br>
+        <input type="text" name="comment" size="50"><br><br>
+        <div class="modal-footer">
+          <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a> -->
+          <input type="submit" value="Send" class='modal-close btn'>
+          <input type="reset" value="Reset" class='btn'>
+        </div>
+        </form>
+  </div>
     <div class='container'>
-        <header class='centerHeader row'>
-            <h4>Stephen Reiser</h4>
-            <h5>Web Developer</h5>
-            <h5>Contact Info:</h5>
-            <ul>
-                <li><a href="./images/StephenReiserResume.pdf" download="StephenReiserResume">Resume</a></li>
-                <li><a href='https://www.linkedin.com/feed/' target='_blank'>LinkedIn</a></li>
-                <li><a href='https://github.com/StephenReiser' target='_blank'>Github</a></li>
-            </ul>
-            
-            
-            
-        </header>
 <!-- Personal info -->
-        <div class='row'>
+        <div class='row' id='PersonalInfo'>
             <div class='col s12'>
                 <!-- <h4>About Me</h4> -->
                 <div style="width: 100%; text-align: center">
@@ -34,7 +75,9 @@
                       </div>
             </div>
             <div class='col m8 About'>
-                I am a finance specialist turned software developer.  My background in finance has taught me to solve complex problems and to adapt quickly to a changing environment.  As a dedicated fast learning problem solver, I have been able to quickly tackle the new challenges of becoming a software developer.
+                I am a finance specialist turned software developer. My background in finance has taught me to solve complex problems and to adapt quickly to a changing environment. As a dedicated fast learning problem solver, I have been able to quickly tackle the new challenges of becoming a software developer.
+
+                I enjoy challenges and learning new things. In my spare
             </div>
             <div class='col m1'></div>
             <div class='col m3'>
@@ -54,10 +97,10 @@
             </div>
         </div>
 <!-- PROJECTS -->
-<div class='project'>
+<!-- <div class='project' id="Portfolio">
         <div class='row'>
 
-            <!-- Unit 1 project -->
+            
             <div class='col s4 '>
                 
                     
@@ -71,7 +114,7 @@
                 <p>Resources Used: jQuery, CSS, HTML</p>
             </div>
         </div>
-            <!-- Unit 2 Project -->
+            
             <div class='row'>
             <div class='col s4'>
                     <img src='./images/BrewView.png' alt='BrewView'>
@@ -84,7 +127,7 @@
             </div>
         </div>
         <div class='row'>
-            <!-- Unit 4 Project -->
+            
             <div class='col s4'>
                 
                 <img src='./images/Unit4Pic.png' alt="unit 4 pic">
@@ -98,7 +141,7 @@
             </div>
         </div>
         <div class='row'>
-            <!-- Unit 4 Project Native -->
+            
             <div class='col s4'>
                 <img src='./images/NativePic2.png' alt='reactNative'>
             </div>
@@ -109,21 +152,97 @@
                     <p>Resources Used: React Native, Ruby on Rails, Postgresql, Knock/JWT</p>
             </div>
         </div>
-    </div>
-        </div>
+    </div> -->
+        
+
+        <div class="carousel carousel-slider center carouselContainer" id='Portfolio'>
+                
+                <div class="carousel-item " href="#one!">
+                  <h2><a target='_blank' href='https://StephenReiser.github.io/unit-one-recipeApp/index.html'>Recipe Search App</a></h2>
+                  
+                      <div class='row'>
+                        <div class='col s4'>
+                                <img src = './images/Unit1Search.png' alt="unit1 search">
+                        </div>
+                        <div class='col s8'>
+                                <p>Recipe Search was the first project I built at GA. Built with jQuery, CSS, and HTML. The app utilizes a 3rd party API called Edamam.  Queries are made via AJAX calls.  Recipe search allows users to search for recipes based on food items, diet restrictions and health restrictions </p>
+                                <a target='_blank' href='https://github.com/StephenReiser/StephenReiser.github.io/tree/master/unit-one-recipeApp'><button class='btn'>Link to GitHub</button></a>
+                                <p>Resources Used: jQuery, CSS, HTML</p>
+                            </div>
+                  </div>
+                </div>
+                
+                <div class="carousel-item " href="#two!">
+                        <h2><a target='_blank' href='https://brewview-27.herokuapp.com/'>BrewView</a></h2>
+                        
+                            <div class='row'>
+                              <div class='col s4'>
+                                    <img src='./images/BrewView.png' alt='BrewView'>
+                              </div>
+                              <div class='col s8'>
+                                    
+                                    <p>BrewView remains a work in progress.  As is, it is a compilation of all of the breweries in CT.  It is built with MongoDB, Mongoose and Express on the backend and EJS/jQuery (as well as a bit of vanilla JS) on the front end.  This was my unit 2 project for GA.  It utilizes a 3rd party API which is queried via the npm request module.  It is filled with features such as maps, authentication, sessions, autocomplete, as well as some CSS toys such as the hamburger icon (on small screen sizes) and the carousel.  The ability to create, edit, and delete breweries is available to a admin user.  Typical users can view information about each brewery and then add comments if logged in</p>
+                                    <a target='_blank' href='https://github.com/StephenReiser/BrewView'><button class='btn'>Link to GitHub</button></a>
+                                    <p>Resources Used: EJS, jQuery, MongoDB, Mongoose, Express, CSS/CSS Frameworks</p>
+                                  </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item " href="#three!">
+                            <h2><a target='_blank' href='https://protected-thicket-74691.herokuapp.com/'>Tabs on Food</a></h2>
+                            
+                                <div class='row'>
+                                  <div class='col s4'>
+                                        <img src='./images/Unit4Pic.png' alt="unit 4 pic">
+                                  </div>
+                                  <div class='col s8'>
+                                        
+                                        
+                                    <p>Built to help my wife narrow down food allergies, this app allows a user to log meals after you ate to help track patterns in what may or may not make you sick.  Built with React on the front end and Ruby on Rails and postgresql on the backend, this app comes with full authentication and dynamic updates.  Users can then go back and add comments and toggle if the meal made them sick or not.  A graph at the top as well as emojis help the user track their triggers.  Additional features include password reset, token authentication, a sudo password reset, as well as some helpers such as React Context.  This app is also built in React Native (see the next project) </p>
+                                    <a target='_blank' href='https://github.com/StephenReiser/DietTrackerFrontEnd'><button class='btn'>Link to Front-end GitHub</button></a>
+                                    <a target='_blank' href='https://github.com/StephenReiser/DietTracker'><button class='btn'>Link to Back-end GitHub</button></a>
+                                    <p>Resources Used: React, Ruby on Rails, Postgresql, Knock/JWT, CSS/CSS Frameworks</p>
+                                      </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item " href="#four!">
+                                <h2>Tabs on Food - With React Native</h2>
+                                
+                                    <div class='row'>
+                                      <div class='col s4'>
+                                            <img src='./images/NativePic2.png' alt='reactNative'>
+                                      </div>
+                                      <div class='col s8'>
+                                            <p>Built with React Native, this was my proof of concept for GA. I wanted to learn something new in a day and implement it over the weekend. Built on the same backend as the previous project, this is the lightweight mobile companion app. While lacking a few of the bonus features such as inline food emojis, password reset, and password change, it has much of the same look and feel as the browser based app.  A user can login, add meals, toggle what made them sick, and view a chart of their top triggers.  It is connected to the same database as the web version so all changes will be saved and updated. </p>
+                                            <a target='_blank' href='https://github.com/StephenReiser/DietTrackerNative'><button class='btn'>Link to Front-end GitHub</button></a>
+                                            <p>Resources Used: React Native, Ruby on Rails, Postgresql, Knock/JWT</p>
+                                          </div>
+                                </div>
+                              </div>
+              </div>
+            </div>
 
 
 
-            <footer>
+            <footer id="ContactInfo">
                 <hr>
                  
                 <h5 class='footerHeader'>Contact Info:</h5>
                 <ul>
-                        <li class = 'footerLI'><a href="./images/StephenReiserResume.pdf" download="StephenReiserResume">Resume</a></li>
+                        <li class = 'footerLI'><a href="./images/StephenReiserResume.pdf" download="StephenReiserResume" target="_blank">Resume</a></li>
                         <li class='footerLI'><a href='https://www.linkedin.com/feed/' target='_blank'>LinkedIn</a></li>
                         <li class= 'footerLI'><a href='https://github.com/StephenReiser' target='_blank'>Github</a></li>
                     </ul>
             </footer>
     </div>
+    <script>
+          $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: true
+         });
+         $(document).ready(function(){
+            $('.modal').modal();
+        });
+      
+    </script>
 </body>
 </html>
