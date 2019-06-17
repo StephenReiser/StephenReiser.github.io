@@ -27,7 +27,7 @@ img {
     font-size: 14px
 }
 body {
-    background-color: #CAE4DB66;
+   
     color: #00303F
 }
 .centerHeader, footer {
@@ -43,7 +43,10 @@ a {
     border: 1px solid #00303F
 } */
 .centerHeader {
-    border: 1px solid #00303F
+    /* border: 1px solid #00303F */
+    background-color: #CAE4DB66;
+    /* margin-top: 10%; */
+    margin: 10% 2% 2% 2%;
 }
 
 .About {
@@ -65,7 +68,9 @@ a {
 
 }
 nav {
-    background-color: #00303F
+    background-color: #00303F;
+    position: fixed;
+    top: 0;
 }
 
 .btn:focus, .btn:hover {
