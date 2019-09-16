@@ -1,0 +1,111 @@
+/* * {
+    border: 1px solid black
+} */
+
+
+.unitOnePic {
+    /* background-image: url("./images/Screen Shot 2019-06-09 at 2.03.20 PM.png"); */
+    
+    /* height: 100%; */
+}
+img {
+    max-width: 100%;
+    /* max-height: 100%; */
+    margin: 2%;
+}
+
+.project {
+    display: flex;
+    flex-direction: column
+}
+
+.footerLI {
+    font-size: 12px;
+}
+
+.footerHeader {
+    font-size: 14px
+}
+body {
+   
+    color: #00303F
+}
+.centerHeader, footer {
+    text-align: center;
+    
+}
+
+a {
+    color: #DCAE1D
+}
+
+/* .centerHeader, .row {
+    border: 1px solid #00303F
+} */
+.centerHeader {
+    /* border: 1px solid #00303F */
+    background-color: #CAE4DB66;
+    /* margin-top: 10%; */
+    margin: 7% 2% 2% 2%;
+    border-radius: 0.3rem;
+}
+
+.About {
+    /* text-align: center; */
+}
+
+.aboutMe {
+    border-bottom: 1px solid #00303F
+}
+
+.btn {
+    background-color: #F7882F
+}
+
+.carouselContainer {
+    min-height: 500px !important;
+    /* border: 1px solid #00303F; */
+    background-color: #7A9D96;
+    border-radius: 0.3rem;
+
+}
+nav {
+    background-color: #00303F;
+    position: fixed;
+    top: 0;
+    z-index: 3
+}
+
+.btn:focus, .btn:hover {
+    background-color: #F7882FB3;
+}
+a:hover {
+    font-weight: 700
+}
+
+.modalSize {
+    padding: 3%;
+}
+
+
+#PersonalInfo {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #7A9D96;
+    border-radius: 0.3rem;
+  }
+
+  .projectDetails {
+      text-align: left
+  }
+
+  @media screen and (min-width:100px) and (max-width:900px){
+    .carouselContainer {
+        min-height: 750px !important;
+    }
+    .centerHeader {
+      
+        margin: 10% 2% 2% 2%;
+        
+    }
+ }

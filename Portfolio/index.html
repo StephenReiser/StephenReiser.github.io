@@ -4,253 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stephen Reiser Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-  <script src='app.js'></script>
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel='stylesheet' href='css/main.css'>
-    <title>Stephen Reiser</title>
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
+      <link rel="stylesheet" href="./css/main.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+   
+    <a class="py-2 d-none d-md-inline-block" href="#PersonalInfo">About Me</a>
+    <a class="py-2 d-none d-md-inline-block" href="#Portfolio">Portfolio</a>
+    <a class="py-2 d-none d-md-inline-block" href="#ContactInfo">Contact Info</a>
     
-        <nav>
-                <div class="nav-wrapper">
-                  <a href="#" class="brand-logo">Stephen Reiser</a>
-                  <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#PersonalInfo">About Me</a></li>
-                    <li><a href="#Portfolio">Portfolio</a></li>
-                    <li><a href="#ContactInfo">Contact Info</a></li>
-                    <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Contact Me</a></li>
-                  </ul>
-                </div>
-              </nav>
-              <header class='centerHeader row'>
-                  <h4>Stephen Reiser</h4>
-                  <h5>Web Developer</h5>
-                  <h5>Contact Info:</h5>
-                  <ul>
-                      <li><a href="./images/StephenReiserResume.pdf" download="StephenReiserResume" target="_blank">Resume</a></li>
-                      <li><a href='www.linkedin.com/in/stephen-reiser' target='_blank'>LinkedIn</a></li>
-                      <li><a href='https://github.com/StephenReiser' target='_blank'>Github</a></li>
-                    </ul>
-                    
-                    
-                    
-                </header>
-
-
-  <!-- Modal Trigger -->
-  
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal modalSize">
-        
-
-        <form action="mailto:stephen.reiser1@gmail.com" method="post" enctype="text/plain">
-        Name:<br>
-        <input type="text" name="name"><br>
-        E-mail:<br>
-        <input type="text" name="mail"><br>
-        Comment:<br>
-        <input type="text" name="comment" size="50"><br><br>
-        <div class="modal-footer">
-          <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a> -->
-          <input type="submit" value="Send" class='modal-close btn'>
-          <input type="reset" value="Reset" class='btn'>
-        </div>
-        </form>
   </div>
-    <div class='container'>
-<!-- Personal info -->
-        <div class='row' id='PersonalInfo'>
-            <div class='col s12'>
-                <!-- <h4>About Me</h4> -->
-                <div style="width: 100%; text-align: center">
-                        <h4 class='aboutMe'>About Me</h4>
-                      </div>
-            </div>
-            <div class='col m8 About'>
-              I am a finance specialist turned software developer. My background in finance has taught me to solve complex problems and adapt quickly to a changing environment. As a dedicated fast-learning problem solver, I've been able to quickly tackle the new challenges of a career in software development.
+</nav>
 
-                
-            </div>
-            <div class='col m1'></div>
-            <div class='col m3'>
-                Tools/Languages:
-                <ul>
-                    <li>HTML/CSS/CSS Frameworks</li>
-                    <li>JavaScript/jQuery</li>
-                    <li>React JS</li>
-                    <li>React Native</li>
-                    <li>Express/EJS</li>
-                    <li>MongoDB/Mongoose</li>
-                    <li>Ruby on Rails</li>
-                    <li>Postgresql</li>
-                    <li>NodeJS</li>
-                    <li>Git</li>
-                </ul>
-            </div>
-        </div>
-<!-- PROJECTS -->
-<!-- <div class='project' id="Portfolio">
-        <div class='row'>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center mainHeaderImage">
+  <div class="col-md-5 p-lg-5 ">
+    <!-- <div class='col-md'> -->
+    <h1 class="display-4 font-weight-normal">Stephen Reiser</h1>
+    <p class="lead font-weight-normal">My Website.</p>
+    <a class="btn btn-outline-secondary" href="#">See Projects</a>
+  </div>
+  <!-- <div class="mainHeaderImage "></div> -->
+  <!-- <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> -->
+</div>
 
-            
-            <div class='col s4 '>
-                
-                    
-                    <img src = './images/Unit1Search.png' alt="unit1 search">
-                
-            </div>
-            <div class='col s8'>
-                <h6><a target='_blank' href='https://StephenReiser.github.io/unit-one-recipeApp/index.html'>Recipe Search App</a></h6>
-                <p>Recipe Search was the first project I built at GA. Built with jQuery, CSS, and HTML. The app utilizes a 3rd party API called Edamam.  Queries are made via AJAX calls.  Recipe search allows users to search for recipes based on food items, diet restrictions and health restrictions </p>
-                <a target='_blank' href='https://github.com/StephenReiser/StephenReiser.github.io/tree/master/unit-one-recipeApp'><button class='btn'>Link to GitHub</button></a>
-                <p>Resources Used: jQuery, CSS, HTML</p>
-            </div>
-        </div>
-            
-            <div class='row'>
-            <div class='col s4'>
-                    <img src='./images/BrewView.png' alt='BrewView'>
-            </div>
-            <div class='col s8'>
-                    <h6><a target='_blank' href='https://brewview-27.herokuapp.com/'>BrewView</a></h6>
-                    <p>BrewView remains a work in progress.  As is, it is a compilation of all of the breweries in CT.  It is built with MongoDB, Mongoose and Express on the backend and EJS/jQuery (as well as a bit of vanilla JS) on the front end.  This was my unit 2 project for GA.  It utilizes a 3rd party API which is queried via the npm request module.  It is filled with features such as maps, authentication, sessions, autocomplete, as well as some CSS toys such as the hamburger icon (on small screen sizes) and the carousel.  The ability to create, edit, and delete breweries is available to a admin user.  Typical users can view information about each brewery and then add comments if logged in</p>
-                    <a target='_blank' href='https://github.com/StephenReiser/BrewView'><button class='btn'>Link to GitHub</button></a>
-                    <p>Resources Used: EJS, jQuery, MongoDB, Mongoose, Express, CSS/CSS Frameworks</p>
-            </div>
-        </div>
-        <div class='row'>
-            
-            <div class='col s4'>
-                
-                <img src='./images/Unit4Pic.png' alt="unit 4 pic">
-            </div>
-            <div class='col s8'>
-                    <h6><a target='_blank' href='https://protected-thicket-74691.herokuapp.com/'>Tabs on Food</a></h6>
-                    <p>Built to help my wife narrow down food allergies, this app allows a user to log meals after you ate to help track patterns in what may or may not make you sick.  Built with React on the front end and Ruby on Rails and postgresql on the backend, this app comes with full authentication and dynamic updates.  Users can then go back and add comments and toggle if the meal made them sick or not.  A graph at the top as well as emojis help the user track their triggers.  Additional features include password reset, token authentication, a sudo password reset, as well as some helpers such as React Context.  This app is also built in React Native (see the next project) </p>
-                    <a target='_blank' href='https://github.com/StephenReiser/DietTrackerFrontEnd'><button class='btn'>Link to Front-end GitHub</button></a>
-                    <a target='_blank' href='https://github.com/StephenReiser/DietTracker'><button class='btn'>Link to Back-end GitHub</button></a>
-                    <p>Resources Used: React, Ruby on Rails, Postgresql, Knock/JWT, CSS/CSS Frameworks</p>
-            </div>
-        </div>
-        <div class='row'>
-            
-            <div class='col s4'>
-                <img src='./images/NativePic2.png' alt='reactNative'>
-            </div>
-            <div class='col s8'>
-                    <h6>Tabs on Food - With React Native</h6>
-                    <p>Built with React Native, this was my proof of concept for GA. I wanted to learn something new in a day and implement it over the weekend. Built on the same backend as the previous project, this is the lightweight mobile companion app. While lacking a few of the bonus features such as inline food emojis, password reset, and password change, it has much of the same look and feel as the browser based app.  A user can login, add meals, toggle what made them sick, and view a chart of their top triggers.  It is connected to the same database as the web version so all changes will be saved and updated. </p>
-                    <a target='_blank' href='https://github.com/StephenReiser/DietTrackerNative'><button class='btn'>Link to Front-end GitHub</button></a>
-                    <p>Resources Used: React Native, Ruby on Rails, Postgresql, Knock/JWT</p>
-            </div>
-        </div>
-    </div> -->
-        
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" id="PersonalInfo">
+  <div class='row'>
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    
+    <h1 class="display-4 font-weight-normal">About Me</h1>
+    <p class="lead font-weight-normal">I am a finance specialist turned software developer. My background in finance has taught me to solve complex problems and adapt quickly to a changing environment. As a dedicated fast-learning problem solver, I've been able to quickly tackle the new challenges of a career in software development.</p>
+    
+  </div>
 
-        <div class="carousel carousel-slider center carouselContainer" id='Portfolio'>
-                
-                <div class="carousel-item " href="#one!">
-                  <h2><a target='_blank' href='https://StephenReiser.github.io/unit-one-recipeApp/index.html'>Recipe Search App</a></h2>
-                  
-                      <div class='row'>
-                        <div class='col s4'>
-                                <img src = './images/Unit1Search.png' alt="unit1 search">
-                        </div>
-                        <div class='col s8 projectDetails'>
-                                <p>Recipe Search was the first project I built at GA. Built with jQuery, CSS, and HTML, this app uses a third party API called Edamam. Queries are made via AJAX calls. Recipe search allows users to search for recipes based on food items, diet restrictions, and health restrictions. </p>
-                                <a target='_blank' href='https://github.com/StephenReiser/StephenReiser.github.io/tree/master/unit-one-recipeApp'><button class='btn'>Link to GitHub</button></a>
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">Tools/Languages:</h1>
+    <ul>
+      <li>HTML/CSS/CSS Frameworks</li>
+      <li>JavaScript/jQuery</li>
+      <li>React JS</li>
+      <li>React Native</li>
+      <li>Express/EJS</li>
+      <li>MongoDB/Mongoose</li>
+      <li>Ruby on Rails</li>
+      <li>Postgresql</li>
+      <li>NodeJS</li>
+      <li>Git</li>
+  </ul>
+    
+  </div>
+</div>
+  
+</div>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" id="Portfolio">
+    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+      <h2 class="display-5">Recipe Search App</h2>
+      <p class="lead">Recipe Search was the first project I built at GA. Built with jQuery, CSS, and HTML, this app uses a third party API called Edamam. Queries are made via AJAX calls. Recipe search allows users to search for recipes based on food items, diet restrictions, and health restrictions. </p>
+      <a target='_blank' href='https://github.com/StephenReiser/StephenReiser.github.io/tree/master/unit-one-recipeApp'><button class='btn'>Link to GitHub</button></a>
                                 <p>Resources Used: jQuery, CSS, HTML, Node.js</p>
-                            </div>
-                  </div>
-                </div>
-                
-                <div class="carousel-item " href="#two!">
-                        <h2><a target='_blank' href='https://brewview-27.herokuapp.com/'>BrewView</a></h2>
-                        
-                            <div class='row'>
-                              <div class='col s4'>
-                                    <img src='./images/BrewView.png' alt='BrewView'>
-                              </div>
-                              <div class='col s8 projectDetails'>
-                                    
-                                    <p>BrewView remains a work in progress. As my unit two project for GA, the current version is a compilation of all of the breweries in CT. It is built with MongoDB, Mongoose and Express on the backend, and EJS/jQuery (as well as a bit of vanilla JS) on the front end. BrewView uses a third party API which is queried via the npm request module. It includes features such as maps, authentication, sessions, and autocomplete, as well as some CSS toys, such as the hamburger icon (on small screen sizes) and the carousel. The admin user has the ability to create, edit, and delete breweries. Typical users can view information about each brewery and then add comments if they are logged in.</p>
-                                    <a target='_blank' href='https://github.com/StephenReiser/BrewView'><button class='btn'>Link to GitHub</button></a>
-                                    <p>Resources Used: jQuery, MongoDB, Mongoose, Express/EJS, CSS/CSS Frameworks, Node.js</p>
-                                  </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item " href="#three!">
-                            <h2><a target='_blank' href='https://protected-thicket-74691.herokuapp.com/'>Tabs on Food</a></h2>
-                            
-                                <div class='row'>
-                                  <div class='col s4'>
-                                        <img src='./images/Unit4Pic.png' alt="unit 4 pic">
-                                  </div>
-                                  <div class='col s8 projectDetails'>
-                                        
-                                        
-                                    <p>Built to help my wife narrow down food intolerances, this app allows users to log meals, track patterns, and help narrow down which foods may make them sick. Built with React on the front end and Ruby on Rails and postgresql on the backend, this app is equipped with full authentication and dynamic updates. After logging a meal, users can add comments and toggle whether or not it made them sick. A graph at the top as well as emojis help the user track their food triggers. Additional features include password reset, token authentication, a sudo password reset, as well as some helpers such as React Context. This app is also built in React Native (see the next project). </p>
-                                    <a target='_blank' href='https://github.com/StephenReiser/DietTrackerFrontEnd' class='btn'>Link to Front-end GitHub</a>
-                                    <br />
-                                    <br />
-                                    <a target='_blank' href='https://github.com/StephenReiser/DietTracker'class='btn'>Link to Back-end GitHub</a>
-                                    <p>Resources Used: React, Ruby on Rails, Postgresql, Knock/JWT, CSS/CSS Frameworks, Node.js</p>
-                                      </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item " href="#four!">
-                                <h2>Tabs on Food - With React Native</h2>
-                                
-                                    <div class='row'>
-                                      <div class='col s4'>
-                                            <img src='./images/NativePic2.png' alt='reactNative'>
-                                      </div>
-                                      <div class='col s8 projectDetails'>
-                                            <p>Built with React Native, this was my proof of concept for GA. I wanted to learn something new in a day and implement it over the weekend. Built on the same backend as the previous project, this is the lightweight mobile companion app. While lacking a few of the bonus features, such as inline food emojis, password reset, and password change, it has much of the same look and feel as the browser-based app. A user can log in, add meals, toggle what made them sick, and view a chart of their top food triggers. It is connected to the same database as the web version so all changes will be saved and updated.</p>
-                                            <a target='_blank' href='https://github.com/StephenReiser/DietTrackerNative'><button class='btn'>Link to Front-end GitHub</button></a>
-                                            <p>Resources Used: React Native, Ruby on Rails, Postgresql, Knock/JWT, Node.js</p>
-                                          </div>
-                                </div>
-                              </div>
-              </div>
-            </div>
-
-
-
-            <footer id="ContactInfo">
-                <hr>
-                 
-                <h5 class='footerHeader'>Contact Info:</h5>
-                <ul>
-                        <li class = 'footerLI'><a href="./images/StephenReiserResume.pdf" download="StephenReiserResume" target="_blank">Resume</a></li>
-                        <li class='footerLI'><a href='www.linkedin.com/in/stephen-reiser' target='_blank'>LinkedIn</a></li>
-                        <li class= 'footerLI'><a href='https://github.com/StephenReiser' target='_blank'>Github</a></li>
-                    </ul>
-            </footer>
     </div>
-    <script>
-          $('.carousel.carousel-slider').carousel({
-            fullWidth: true,
-            indicators: true
-         });
-         $(document).ready(function(){
-            $('.modal').modal();
-        });
+    <div class="unitOnePic" style="height: 300px;"></div>
+  </div>
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">BrewView</h2>
+      <p class="lead">BrewView remains a work in progress. As my unit two project for GA, the current version is a compilation of all of the breweries in CT. It is built with MongoDB, Mongoose and Express on the backend, and EJS/jQuery (as well as a bit of vanilla JS) on the front end. BrewView uses a third party API which is queried via the npm request module. It includes features such as maps, authentication, sessions, and autocomplete, as well as some CSS toys, such as the hamburger icon (on small screen sizes) and the carousel. The admin user has the ability to create, edit, and delete breweries. Typical users can view information about each brewery and then add comments if they are logged in.</p>
+      <a target='_blank' href='https://github.com/StephenReiser/BrewView'><button class='btn'>Link to GitHub</button></a>
+      <p>Resources Used: jQuery, MongoDB, Mongoose, Express/EJS, CSS/CSS Frameworks, Node.js</p>
+    </div>
+    <div class="unitTwoPic" style="height: 300px;"></div>
+  </div>
+</div>
 
-        
-    //     setInterval(() => {
-    //   $('.carousel').carousel('next');
-    // }, 4500);
-    // Not sure if timer makes sense
-      
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Tabs on Food</h2>
+      <p class="lead">Built to help my wife narrow down food intolerances, this app allows users to log meals, track patterns, and help narrow down which foods may make them sick. Built with React on the front end and Ruby on Rails and postgresql on the backend, this app is equipped with full authentication and dynamic updates. After logging a meal, users can add comments and toggle whether or not it made them sick. A graph at the top as well as emojis help the user track their food triggers. Additional features include password reset, token authentication, a sudo password reset, as well as some helpers such as React Context. This app is also built in React Native (see the next project). </p>
+      <a target='_blank' href='https://github.com/StephenReiser/DietTrackerFrontEnd' class='btn'>Link to Front-end GitHub</a>
+      <br />
+      <br />
+      <a target='_blank' href='https://github.com/StephenReiser/DietTracker'class='btn'>Link to Back-end GitHub</a>
+      <p>Resources Used: React, Ruby on Rails, Postgresql, Knock/JWT, CSS/CSS Frameworks, Node.js</p>
+    </div>
+    <div class="unitThreePic" style="height: 300px;"></div>
+  </div>
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+      <h2 class="display-5">Tabs on Food - With React Native</h2>
+      <p class="lead">Built with React Native, this was my proof of concept for GA. I wanted to learn something new in a day and implement it over the weekend. Built on the same backend as the previous project, this is the lightweight mobile companion app. While lacking a few of the bonus features, such as inline food emojis, password reset, and password change, it has much of the same look and feel as the browser-based app. A user can log in, add meals, toggle what made them sick, and view a chart of their top food triggers. It is connected to the same database as the web version so all changes will be saved and updated.</p>
+      <a target='_blank' href='https://github.com/StephenReiser/DietTrackerNative'><button class='btn'>Link to Front-end GitHub</button></a>
+      <p>Resources Used: React Native, Ruby on Rails, Postgresql, Knock/JWT, Node.js</p>
+    </div>
+    <div class="unitFourNative" style=" height: 300px;"></div>
+  </div>
+</div>
+
+
+
+<footer class="container py-5" id="ContactInfo">
+  <div class="row">
+    
+    <div class="col-6 col-md">
+      <h5>Contact Info</h5>
+      <ul class="list-unstyled text-small">
+          <li class = 'footerLI'><a class="text-muted" href="./images/StephenReiserResume.pdf" download="StephenReiserResume" target="_blank">Resume</a></li>
+          <li class='footerLI'><a class="text-muted" href='www.linkedin.com/in/stephen-reiser' target='_blank'>LinkedIn</a></li>
+          <li class= 'footerLI'><a class="text-muted" href='https://github.com/StephenReiser' target='_blank'>Github</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
     </script>
-</body>
-</html>
+
+        </body>
+    </html>
+ 
