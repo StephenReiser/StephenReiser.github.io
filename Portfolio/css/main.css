@@ -92,35 +92,7 @@ a {
     transform: rotate(30deg); */
   }
 
-
-.unitOnePic {
-    /* background-image: url("../images/Unit1Search.png"); */
-    /* background-repeat: no-repeat; */
-    background: url("../images/Unit1Search.png") no-repeat center;
-    background-size: contain;
-    
-    /* height: 100%; */
-}
-.unitTwoPic {
-    /* background-image: url("../images/Unit1Search.png"); */
-    /* background-repeat: no-repeat; */
-    background: url("../images/BrewView.png") no-repeat center;
-    background-size: contain;
-    
-    /* height: 100%; */
-}
-.unitThreePic {
-    background-image: url("../images/Unit4Pic.png"), url("../images/Unit4Login.png");
-    background-size: contain;
-    background-repeat: no-repeat, no-repeat;
-    background-position: left, right;
-
-}
-
-.unitFourNative {
-    background: url("../images/NativePic2.png") no-repeat center;
-    background-size: contain;
-}
+  
 img {
     max-width: 100%;
     /* max-height: 100%; */
@@ -230,8 +202,8 @@ a:hover {
  .singleProjContainer {
      
      
-     height: 250px;
-     width: 250px;
+     height: 400px;
+     width: 300px;
      position: relative;
      background-color: #f8f9fa;
     color: #00303F;
@@ -261,7 +233,7 @@ a:hover {
 .frontMain {
     height: 70%;
     width: 100%;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
 }
 
@@ -282,7 +254,7 @@ a:hover {
     margin: 0;
     position: absolute;
     top: 50%;
-    width: 225px;
+    width: 278px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
@@ -307,7 +279,7 @@ a:hover {
 .backTop {
     height: 70%;
     width: 100%;
-    padding: 5px;
+    padding: 15px;
     
 }
 
@@ -329,3 +301,15 @@ a:hover {
      max-height: 100% !important;
      max-width: 100% !important;
  }
+
+
+ /* Need at medias here for the main header image */
+ /* Need at medias here for the main header image */
+ /* Need at medias here for the main header image */
+ 
+
+ @media only screen and (max-width: 600px) {
+    .mainHeaderImage {
+        height: 500px;
+    }
+  }
