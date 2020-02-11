@@ -311,5 +311,10 @@ a:hover {
  @media only screen and (max-width: 600px) {
     .mainHeaderImage {
         height: 500px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: absolute
     }
   }
