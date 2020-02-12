@@ -141,7 +141,8 @@ img {
 
 .btn {
     background-color: #F7882F;
-    margin: 2px;
+    margin-bottom: 8px;
+
 }
 
 .carouselContainer {
