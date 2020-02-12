@@ -307,7 +307,7 @@ a:hover {
  /* Need at medias here for the main header image */
  /* Need at medias here for the main header image */
  
-
+/* 
  @media only screen and (max-width: 600px) {
     .mainHeaderImage {
         height: 500px;
@@ -317,4 +317,9 @@ a:hover {
         background-size: cover;
         position: absolute
     }
+  } */
+
+  .navbar-dark .navbar-toggler {
+      color: #DCAE1D;
+      border-color: #DCAE1D
   }
