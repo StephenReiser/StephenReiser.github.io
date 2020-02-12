@@ -73,16 +73,22 @@ a {
 
 .mainHeaderImage {
     position: absolute;
-    background: url("../images/editedHeader.png") no-repeat center center fixed;
+    background: url("../images/editedHeader.png");
     /* right: 10%; */
     /* bottom: -30%; */
     /* width: 100%; */
     
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     height: 1000px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
     /* height: 540px; */
     /* background-repeat:no-repeat; */
 /* display: compact; */
