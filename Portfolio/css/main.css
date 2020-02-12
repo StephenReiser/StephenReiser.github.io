@@ -329,3 +329,10 @@ a:hover {
       color: #DCAE1D;
       border-color: #DCAE1D
   }
+
+
+  @media only screen and (max-device-width: 1366px) {
+    .mainHeaderImage {
+      background-attachment: scroll;
+    }
+  }
