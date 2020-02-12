@@ -334,6 +334,6 @@ a:hover {
   @media only screen and (max-device-width: 1366px) {
     .mainHeaderImage {
       background-attachment: scroll;
-      height: 200px;
+      /* height: 200px; */
     }
   }
