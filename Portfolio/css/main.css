@@ -78,7 +78,7 @@ a {
     /* bottom: -30%; */
     /* width: 100%; */
     
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -334,5 +334,6 @@ a:hover {
   @media only screen and (max-device-width: 1366px) {
     .mainHeaderImage {
       background-attachment: scroll;
+      height: 200px;
     }
   }
